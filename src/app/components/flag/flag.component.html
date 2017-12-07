@@ -6,29 +6,16 @@
   </div>
   <div class="dropdown-middle">
     <ul class="systemflat-list">
-      <li class="clearfix">
+      <li class="clearfix" *ngFor="let flatNotification of flatNotifList">
         <div class="col-sm-11 col-md-11">
-          <p class="woid-number"><a href="#">WOID 1144332</a></p>
-          <p class="reminder-descrip">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum printing and typesetting industry. Lorem Ipsum.</p>
-          <span class="reminder-date">10:27 am</span>
+          <p class="woid-number"><a href="#">{{flatNotification.voidNumber}}</a></p>
+          <p class="reminder-descrip">{{flatNotification.flatDescrip}}</p>
+          <span class="reminder-date">{{flatNotification.flatTime}}</span>
         </div>
-        <div class="col-sm-1 col-md-1 flags-circle"><p class="red"></p></div>
-      </li>
-      <li class="clearfix active">
-        <div class="col-sm-11 col-md-11">
-          <p class="woid-number"><a href="#">WOID 1144332</a></p>
-          <p class="reminder-descrip">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum printing and typesetting industry. Lorem Ipsum.</p>
-          <span class="reminder-date">10:27 am</span>
+        <div class="col-sm-1 col-md-1 flags-circle">
+          <p class="red"></p>
+          <!-- <p class="green"> -->
         </div>
-        <div class="col-sm-1 col-md-1 flags-circle"><p class="red"></p></div>
-      </li>
-      <li class="clearfix">
-        <div class="col-sm-11 col-md-11">
-          <p class="woid-number"><a href="#">WOID 1144332</a></p>
-          <p class="reminder-descrip">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum printing and typesetting industry. Lorem Ipsum.</p>
-          <span class="reminder-date">10:27 am</span>
-        </div>
-        <div class="col-sm-1 col-md-1 flags-circle"><p class="green"></p></div>
       </li>
     </ul>
   </div>
