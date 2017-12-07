@@ -1,0 +1,164 @@
+<app-order-detail-tabs></app-order-detail-tabs>
+<app-insured></app-insured>
+<div class="clearfix">
+  <!-- Progress Report Tab Start -->
+  <div class="appoint-current-whitebox">
+    <div class="date-label">20 <small class="month">OCT</small></div>
+    <div class="border-btm clearfix">
+      <div class="appointment-dtl-left">
+        <div class="appoint-time-slot clearfix">
+          <span class="locationicon"><i class="icon-exl-location"></i></span>
+          <div class="appoint-time-column">
+            <label class="time-label">Appointment Time</label>
+            <span class="time-big">10:00 am - 11:00 am CST</span>
+            <p class="client-time">Client Time: 9:00 am - 10:00 am EDT</p>
+            <p class="clock-hour"><i class="icon-exl-clock clock"></i>1 hr</p>
+          </div>
+          <div class="appoint-time-column">
+            <label class="time-label">Window Slot</label>
+            <span class="time-big">9:30 am - 11:30 am CST</span>
+            <p class="client-time">Client Time: 8:30 am - 10:30 am EDT</p>
+            <p class="clock-hour"><i class="icon-exl-clock clock"></i>2 hr</p>
+          </div>
+          <a href="#" class="view-agenda-link">View Day Agenda</a>
+        </div>
+        <div class="appoint-namepolicy-note clearfix">
+          <span class="appoint-name">John Smith K</span>
+          <span class="appoint-address">
+            22, St. Armand’s Circle, Tampa, Florida <br><br>
+            (874) 732 7712
+          </span>
+          <span class="policy-type deviderline">
+            <label class="policy-label">Policy Type</label>
+            <p>Workers Compensation</p>
+          </span>
+          <span class="policy-notes">
+            <label class="policy-label">Notes</label>
+            <p>Walk through the store for inventory checks andrecord/ validate with records provided to us in t...</p>
+          </span>
+          <a href="#" class="policy-edit"><i class="icon-exl-edit"></i></a>
+        </div>
+      </div>
+
+      <div class="status-colum">
+        <label class="status-label">Status</label>
+        <span class="schedule-big">Scheduled</span>
+        <p class="post-sent">US Mail Sent</p>
+        <p class="link-confirm clearfix" [hidden]="confirmExpand">
+          <a (click)="confirmToggle()">Confirm
+            <i class="icon-exl-arrow-down arrowdown"></i>
+            <!-- <i class="icon-exl-arrow-up arrowdown"></i> -->
+          </a>
+          <a href="#">Re-schedule</a>
+          <a href="#">Cancel <br>Appointment</a>
+        </p>
+      </div>
+    </div>
+    <!-- Current Appointment Date Expandable Start -->
+    <div class="clearfix" *ngIf="confirmExpand">
+      <div class="latterdilivery-record clearfix">
+      <div class="col-sm-12 col-md-6 border-right">
+        <div class="latter-delivery-info">
+          <h5 class="latter-title">Letter Delivery Information</h5>
+          <div class="clearfix row">
+            <div class="col-xs-12 col-sm-7 col-md-7">
+              <div class="letterdeli-form row">
+                <label class="col-xs-12 col-sm-5 label-left">Contact Name:</label>
+                <div class="col-xs-12 col-sm-7">John McClaine</div>
+              </div>
+              <div class="letterdeli-form row">
+                <label class="col-xs-12 col-sm-5 label-left">Phone:</label>
+                <div class="col-xs-12 col-sm-7">(853)-530-9912</div>
+              </div>
+              <div class="letterdeli-form row">
+                <label class="col-xs-12 col-sm-5 label-left">Email:</label>
+                <div class="col-xs-12 col-sm-7">contact@olafsicecreams.biz</div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-5 col-md-5">
+              <div class="letterdeli-form row">
+                <label class="col-sm-12 adress-label">Address:</label>
+                <div class="col-sm-12">456 N Rodeo Dr, Beverly Hills, CA 90210</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-6 border-left">
+        <div class="appoint-records">
+          <h5 class="records-title">RECORDS</h5>
+          <div class="record-list row">
+            <div class="col-xs-12 col-sm-4">Audit Type:</div>
+            <div class="col-xs-12 col-sm-8 paddrt-none">Workers Comp, Umbrella, Inland Marine</div>
+          </div>
+          <div class="record-list row">
+            <div class="col-xs-12 col-sm-4">Records Requested:</div>
+            <div class="col-xs-12 col-sm-8 paddrt-none">Overtime paid classification, Cafeteria 125 amounts, Timecards showing start and stop times, Most rescent tax returns</div>
+          </div>
+        </div>
+      </div>
+      </div>
+      <div>
+        <form class="inline-form appoint-form clearfix">
+          <div class="form-group clearfix">
+            <label class="control-label topmargin">NOTES</label>
+            <div class="input-wrap">
+              <textarea class="textarea">Walk through the store for inventory checks and record/ validate with records provided to us in the details of the location.</textarea>
+            </div>
+          </div>
+          <div class="form-group clearfix">
+            <label class="control-label">DELIVERY MEDIUM</label>
+            <div class="input-wrap">
+              <div class="clearfix">
+                <label class="radio-label">
+                  <input type="radio" name="mail" checked>
+                  <span class="check-label">US Mail</span>
+                </label>
+                <label class="radio-label">
+                  <input type="radio" name="mail">
+                  <span class="check-label">Email</span>
+                </label>
+                <label class="radio-label">
+                  <input type="radio" name="mail">
+                  <span class="check-label">None</span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group btngroups clearfix">
+            <button type="button" class="btn btn-primary btn-size">CONFIRM</button>
+            <button type="button" class="btn btn-border btn-size">CANCEL</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="clearfix">
+    <div class="table-greyhead">HISTORY</div>
+    <div class="grid-table transparent">
+      <ul>
+        <li class="grid-title clearfix">
+          <span class="col col-6">&nbsp;</span>
+          <span class="col col-14">CHANGED DATE</span>
+          <span class="col col-20">Letter Address</span>
+          <span class="col col-12">APPT Date</span>
+          <span class="col col-14">WINDOW TIME</span>
+          <span class="col col-18">NOTES</span>
+          <span class="col col-15">STATUS</span>
+        </li>
+        <li class="clearfix" *ngFor="let historyGrids of historyGrid">
+          <span class="col col-6">
+            <i class="icon-exl-location location"></i>
+            <i class="icon-exl-phone phone"></i>
+          </span>
+          <span class="col col-14">{{historyGrids.changeDate}}</span>
+          <span class="col col-20">{{historyGrids.letterAddress}}</span>
+          <span class="col col-12">{{historyGrids.apptDate}}</span>
+          <span class="col col-14">{{historyGrids.windowTime}}</span>
+          <span class="col col-18">{{historyGrids.notes}}</span>
+          <span class="col col-15">{{historyGrids.status}}</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

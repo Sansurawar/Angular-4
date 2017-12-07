@@ -1,0 +1,533 @@
+/*----------------- Responsive CSS -----------------*/
+
+/* For iPads Scresns ----------- */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .filter-select-checkform {
+    margin-top: 5px;
+    .form-group {
+      margin: 12px 0;
+      .control-label {
+        width: 100%;
+      }
+      .select-form-wrap {
+        width: 100%;
+      }
+    }
+  }
+  .actions-dropdown {
+    width: 392px;
+  }
+  ul.order-subtabs {
+    li {
+      a {
+        padding: 11px 12px;
+        &:first-child {
+          padding: 11px 12px;
+        }
+      }
+    }
+  }
+  .policy-dropdown {
+    .policy-select-form {
+      width: 25%;
+    }
+  }
+
+  /* WOID Details - General Tab Page ----------- */
+  .collapse-form {
+    .collapse-expand-container {
+      .woid-form {
+        .form-group {
+          label {
+            width: 100%;
+          }
+          .input-div {
+            width: 100%;
+            .calendar-input {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+    .column-33 {
+      width: 50%;
+    }
+  }
+
+  /* WOID Details - Progress Report Tab Page ----------- */
+  .add-report-form {
+    .report-form {
+      .form-group {
+        .control-label {
+          width: 15%;
+        }
+      }
+    }
+  }
+
+  /* WOID Details - Documents Tabs Page ----------- */
+  .document-sort {
+    .inputbox {
+      width: 30%;
+    }
+    .sortby-form {
+      width: 20%;
+    }
+  }
+
+  /* WOID Details - Appointments Tabs Page ----------- */
+  .appoint-current-whitebox {
+    .appointment-dtl-left {
+      width: 100%;
+      .appoint-time-slot {
+        .locationicon {
+          margin-right: 25px;
+        }
+      }
+      .appoint-time-column {
+        width: 35%;
+        margin: 0 0 0 35px;
+      }
+      .view-agenda-link {
+        margin: 10px 0 0 115px;
+      }
+    }
+    .appoint-namepolicy-note {
+      .appoint-name {
+        width: 25%;
+      }
+      .appoint-address {
+        width: 65%;
+      }
+      .policy-type {
+        width: 28%;
+        padding-left: 13px;
+        border: none;
+      }
+      .policy-notes {
+        width: 60%;
+      }
+    }
+    .status-colum {
+      width: 90%;
+      margin-left: 28px;
+      padding-bottom: 20px;
+    }
+  }
+
+  .appoint-records {
+    margin: 36px 0 0 0;
+  }
+
+  /* All Actions Page  ----------- */
+  .allactions-table {
+    ul li {
+      .iconmarked {
+        margin-left: 0;
+      }
+      .delete {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+
+
+/* For Mobile Scresns ----------- */
+@media screen and (max-width: 767px) {
+  .leftpanel {
+    position: static;
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+    background: none;
+    .navigation {
+      height: auto;
+      background-color: $color-white;
+      ul {
+        li {
+          width: 39%;
+          float: left;
+          border-bottom: none;
+          a {
+            padding: 20px 0 7px 0;
+            color: $icon-color5;
+            border-left: none;
+            .nav-icons {
+              color: $icon-color5;
+              line-height: 27px;
+            }
+            &:hover {
+              border-bottom: 4px solid $nav-hover-left-border;
+              color: $nav-hover-left-border;
+              border-left: none;
+              background: none;
+              .nav-icons {
+                color: $nav-hover-left-border;
+              }
+            }
+          }
+          &.active {
+            border-bottom: 4px solid $nav-hover-left-border;
+            border-left: none;
+            background: none;
+            a {
+              color: $nav-hover-left-border;
+              &:hover {
+  							border-bottom: 0px solid transparent;
+  						}
+              .nav-icons {
+                color: $nav-hover-left-border;
+              }
+            }
+          }
+        }
+      }
+      .nav-collapse-view {
+  			ul {
+  				li {
+  					width: 100%;
+  					border-bottom: 1px solid $color-light-blue3;
+  					text-align: left;
+  					a {
+  						color: $color-light-blue2;
+  						&:hover {
+  							border-bottom: none;
+  						}
+  					}
+  					.icon-left {
+  						float: left;
+  						margin-right: 10px;
+  						line-height: 21px;
+  					}
+  				}
+  			}
+  		}
+    }
+  }
+
+  header {
+    position: static;
+    background-color: $color-white;
+    .inventory-logo {
+      display: none;
+    }
+    .ordertitle {
+      margin-top: 20px;
+      float: left;
+    }
+  }
+  .logo {
+  	display: none;
+  }
+  .notifi-messge-icons {
+    border-right: none;
+    margin-right: 0;
+    .icons-group {
+      .link {
+        .icons {
+          color: $icon-color5;
+        }
+      }
+      .notifi-icons-dropdown {
+        width: 300px;
+      }
+    }
+  }
+  .userdtl-dropdown {
+    &:hover ul.dropdowns {
+      width: 135px;
+      right: 0;
+      left: auto;
+      top: 27px;
+      background-color: $icon-color5;
+      li {
+        a {
+          background-color: $color-light-blue3;
+          border-bottom: 1px solid $color-light-blue2;
+          color: $left-panel;
+          &:hover {
+            background-color: $color-light-blue9;
+            color: $left-panel;
+          }
+        }
+      }
+    }
+  }
+
+  .header-usericon {
+    font-size: 21px;
+    color: $icon-color5;
+    padding: 2px 0 6px 0;
+  }
+  .actions-dropdown {
+    width: 60%;
+    right: 105px;
+    .arrow-up {
+      right: 56px;
+    }
+  }
+  .sortby-section {
+    .soft-select-form {
+      width: 30%;
+    }
+  }
+
+  .main-container {
+    margin-left: 0;
+    .middle-portion {
+      padding-top: 0;
+    }
+  }
+  .filter-greybox {
+    .filter-mid-blue {
+      .filter-expand {
+        .status {
+          width: auto;
+          margin-bottom: 25px;
+          ul.status-check-list {
+            li {
+              width: 30%;
+              float: left;
+              margin: 7px 0;
+            }
+          }
+        }
+        .filter-show-work {
+          .progressbar-wrap {
+            .progressbar {
+              margin-top: 30px;
+            }
+          }
+        }
+        .filter-btn-group {
+          .btn-border {
+            margin: 5px 0;
+          }
+        }
+      }
+    }
+  }
+  .filter-select-checkform {
+    margin-top: 5px;
+    .form-group {
+      margin: 12px 0;
+      .control-label {
+        width: 100%;
+      }
+      .select-form-wrap {
+        width: 100%;
+      }
+    }
+  }
+
+  ul.order-subtabs {
+    margin-top: 0px;
+    li {
+      width: 100%;
+      text-align: center;
+      a {
+        padding: 11px 8px;
+        &:first-child {
+          padding: 11px 8px;
+        }
+      }
+      &:last-child {
+        margin-bottom: 12px;
+      }
+    }
+  }
+  .policy-dropdown {
+    .policy-select-form {
+      width: 50%;
+    }
+  }
+
+  /* WOID Details - General Tab Page ----------- */
+  .collapse-form {
+    .collapse-expand-container {
+      .woid-form {
+        .form-group {
+          label {
+            width: 100%;
+          }
+          .input-div {
+            width: 100%;
+            .calendar-input {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+    .column-33 {
+      width: 100%;
+    }
+  }
+
+  /* WOID Details - Progress Report Tab Page ----------- */
+  .add-report-form {
+    .report-form {
+      .form-group {
+        .control-label {
+          width: 100%;
+        }
+        .input-wrap {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  /* WOID Details - Documents Tabs Page ----------- */
+  .document-sort {
+    .inputbox {
+      width: 40%;
+    }
+    .sortby-form {
+      width: 30%;
+    }
+  }
+
+  /* WOID Details - Appointments Expandable Tabs Page ----------- */
+  .appoint-current-whitebox {
+    .appointment-dtl-left {
+      width: 100%;
+      .appoint-time-slot {
+        .locationicon {
+          margin: -17px 25px 0 85px;
+        }
+      }
+      .appoint-time-column {
+        width: 85%;
+        margin: 0 0 0 11%;
+      }
+      .view-agenda-link {
+        margin: 10px 0 0 11%;
+      }
+    }
+    .appoint-namepolicy-note {
+      .appoint-name {
+        width: 25%;
+      }
+      .appoint-address {
+        width: 65%;
+        margin-left: 30px;
+      }
+      .policy-type {
+        width: 25%;
+        margin-left: 30px;
+        border: none;
+        padding-left: 0;
+      }
+      .policy-notes {
+        width: 58%;
+        margin-left: 25px;
+      }
+    }
+    .status-colum {
+      width: 90%;
+      margin-left: 28px;
+      padding-bottom: 20px;
+    }
+  }
+
+  .appoint-form {
+    .form-group {
+      .control-label {
+        width: 98%;
+        margin-bottom: 7px;
+        padding-left: 0;
+      }
+      .input-wrap {
+        width: 98%;
+      }
+    }
+  }
+  .appoint-records {
+    margin: 36px 0 0 0;
+    .record-list {
+      .paddrt-none {
+        padding-left: 15px;
+      }
+    }
+  }
+
+  /* WOID Details - Records Tabs Page ----------- */
+  .select-record-wrap {
+    .record-requested {
+      margin-top: 40px;
+    }
+  }
+
+  .showcompleted-section {
+    .search-wrap {
+      width: 100%;
+      float: left;
+    }
+    .search-wrap {
+      margin-left: 0;
+      padding-left: 0;
+      border-left: 0;
+      .search-action {
+        width: 100%;
+      }
+    }
+  }
+  .new-actions {
+    width: auto;
+    .newaction-form {
+      .form-group {
+        .control-label {
+          width: 100%;
+          margin-bottom: 5px;
+        }
+        .input-wrap {
+          width: 100%;
+        }
+      }
+      .savecancel-buttons .btn {
+        width: auto;
+      }
+    }
+  }
+  .allactions-table {
+    ul li {
+      .iconmarked {
+        margin-left: 0;
+      }
+      .delete {
+        float: left;
+      }
+    }
+  }
+
+
+
+  /* Footer ----------- */
+  footer {
+    .copy-right {
+      text-align: center;
+      margin-top: 10px;
+    }
+    .ftr-link {
+      text-align: center;
+      a {
+        margin: 15px 0 15px 12px;
+        float: none;
+        display: inline-block;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .navbar-collapse.navmobile {
+    display: none !important;
+  }
+  // .navbar-collapse.collapse {
+  //   display: none !important;
+  // }
+}

@@ -1,0 +1,54 @@
+<app-order-detail-tabs></app-order-detail-tabs>
+<app-insured></app-insured>
+<div class="clearfix">
+  <!-- Progress Report Tab Start -->
+  <div class="progressrpt-table-whitebox">
+    <div class="grid-table">
+      <ul class="border-none">
+        <li class="grid-title clearfix">
+          <span class="col col-20">Date Time<i class="fa fa-sort iconsort" aria-hidden="true"></i></span>
+          <span class="col col-25">Prog Note Type</span>
+          <span class="col col-35">Notes</span>
+          <span class="col col-20">Field Rep</span>
+        </li>
+        <li class="clearfix" *ngFor="let reportGrid of progressReportGrid">
+          <span class="col col-20">{{reportGrid.dateTime}}</span>
+          <span class="col col-25"><a href="#" class="icon-edit"><i class="icon-exl-edit"></i></a>{{reportGrid.progNoteType}}</span>
+          <span class="col col-35"><a href="#" class="icon-edit"><i class="icon-exl-edit"></i></a>{{reportGrid.Notes}}</span>
+          <span class="col col-20">{{reportGrid.fieldRep}}</span>
+        </li>
+      </ul>
+    </div>
+    <div class="add-report-form">
+      <h5 class="report-title">Add Report</h5>
+      <form class="inline-form report-form clearfix">
+        <div class="form-group clearfix">
+          <label class="control-label">Prog Note Type</label>
+          <div class="input-wrap row">
+            <span class="selectbox col-sm-5 col-md row-5">
+              <select class="cs-select cs-skin-border">
+                <option>Select</option>
+                <option value="">Select 1</option>
+                <option value="">Select 2</option>
+                <option value="">Select 3</option>
+              </select>
+            </span>
+          </div>
+        </div>
+        <div class="form-group clearfix">
+          <label class="control-label">Notes</label>
+          <div class="input-wrap">
+            <textarea class="textarea" rows="4">Enter Notes</textarea>
+          </div>
+        </div>
+        <div class="form-group clearfix">
+          <label class="control-label">&nbsp;</label>
+          <div class="input-wrap clearfix">
+            <button type="button" class="btn btn-primary btn-length">Add</button>
+            <button type="button" class="btn btn-border btn-length margin-left">CANCEL</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

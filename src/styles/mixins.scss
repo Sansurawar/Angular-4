@@ -1,0 +1,108 @@
+/*----------------- Mixins -----------------*/
+
+/*------- Text Ellipsis  -------*/
+@mixin ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+/*------- Border Radius  -------*/
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin border-top-left-radius ($radius){
+  -webkit-border-top-left-radius: $radius;
+     -moz-border-top-left-radius: $radius;
+          border-top-left-radius: $radius;
+}
+@mixin border-top-right-radius ($radius){
+  -webkit-border-top-right-radius: $radius;
+     -moz-border-top-right-radius: $radius;
+          border-top-right-radius: $radius;
+}
+@mixin border-bottom-left-radius ($radius){
+  -webkit-border-bottom-left-radius: $radius;
+     -moz-border-bottom-left-radius: $radius;
+          border-bottom-left-radius: $radius;
+}
+@mixin border-bottom-right-radius ($radius){
+  -webkit-border-bottom-right-radius: $radius;
+     -moz-border-bottom-right-radius: $radius;
+          border-bottom-right-radius: $radius;
+}
+
+/*------- Clear Fix Both  -------*/
+@mixin clearfix {
+  &:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+  * html & { height: 1px }
+}
+
+
+/*------- Box Shadow -------*/
+@mixin box-shadow($shadows...) {
+  -moz-box-shadow: $shadows;
+  -webkit-box-shadow: $shadows;
+  box-shadow: $shadows;
+}
+
+/*------- Text Shadow -------*/
+@mixin text-shadow ($string: 0 1px 3px rgba(0, 0, 0, 0.2)) {
+  text-shadow: $string;
+}
+
+/*------- Word Break -------*/
+@mixin word-wrap {
+  word-wrap: break-word;
+}
+
+/*------- Fonts Roboto -------*/
+@mixin font-roboto {
+  font-family: 'Roboto', sans-serif;
+}
+@mixin font-roboto-lt {
+  font-family: 'Roboto Lt', sans-serif;
+}
+@mixin font-roboto-th {
+  font-family: 'Roboto Th', sans-serif;
+}
+
+/*------- Fonts Montserrat -------*/
+@mixin font-montserrat {
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.5px;
+}
+@mixin font-montserrat-regular {
+  font-family: 'Montserrat Regular', sans-serif;
+  letter-spacing: 0.5px;
+}
+@mixin font-montserrat-semi {
+  font-family: 'Montserrat Semi', sans-serif;
+  letter-spacing: 0.5px;
+}
+@mixin font-montserrat-hairline {
+  font-family: 'Montserrat Hairline', sans-serif;
+  letter-spacing: 0.5px;
+}
+@mixin font-montserrat-ultra {
+  font-family: 'Montserrat Ultra', sans-serif;
+  letter-spacing: 0.5px;
+}
+@mixin font-montserrat-light {
+  font-family: 'Montserrat Light', sans-serif;
+  letter-spacing: 0.5px;
+}

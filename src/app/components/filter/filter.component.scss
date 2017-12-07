@@ -1,0 +1,295 @@
+// .filter-greybox {
+//   background-color: $color-light-blue6;
+//   padding: 17px 0 18px 0;
+//   border-bottom: 2px solid $color-light-blue9;
+//   margin-bottom: 24px;
+//   .filter-title {
+//     font-size: 1.143em;
+//     padding: 0;
+//     color: $color-dark-blue3;
+//     line-height: 32px;
+//   }
+//   .filter-select-form {
+//     padding-left: 0;
+//     .cs-placeholder {
+//       border: 1px solid $color-light-blue8;
+//     }
+//   }
+//   .filter-collaps {
+//     float: right;
+//     text-align: right;
+//     padding-right: 0;
+//     a {
+//       display: inline-block;
+//       .collaps-icon {
+//         font-size: 35px;
+//         color: $color-light-blue10;
+//       }
+//     }
+//   }
+//   .filter-mid-blue {
+//     background-color: $color-light-blue5;
+//     padding-top: 14px;
+//     padding-bottom: 12px;
+//     margin: 18px 0 20px 0;
+//     .filter-descrip {
+//       .descrip {
+//         font-size: 0.857em;
+//         margin-bottom: 2px;
+//         &:first-child {
+//           margin-bottom: 7px;
+//         }
+//       }
+//     }
+//     .filter-expand {
+//       .title {
+//         font-size: 1em;
+//         text-transform: uppercase;
+//         color: $color-light-blue10;
+//         padding-left: 0;
+//       }
+//       .clearall {
+//         font-size: 0.857em;
+//         text-align: right;
+//         padding-right: 0;
+//         margin-top: 6px;
+//         a {
+//           color: $color-dark-blue3;
+//           text-decoration: underline;
+//         }
+//       }
+//       .status {
+//         width: 21%;
+//         border-right: 1px solid $color-dark-blue6;
+//         padding-right: 0;
+//         .status-title {
+//           font-size: 0.857em;
+//           color: $color-dark-blue5;
+//         }
+//         ul.status-check-list {
+//           list-style: none;
+//           margin: 0;
+//           max-height: 370px;
+//           overflow: scroll;
+//           li {
+//             margin: 21px 0;
+//             .check-wrap {
+//               .check-label {
+//                 font-size: 0.857em;
+//                 color: $color-dark-blue3;
+//                 display: inline-block;
+//                 &:before {
+//                   background-color: $color-white;
+//                   width: 17px;
+//                   height: 17px;
+//                 }
+//               }
+//               :checked + .check-label:before {
+//                 width: 17px;
+//                 height: 17px;
+//                 font-size: 15px;
+//                 line-height: 15px;
+//               }
+//             }
+//           }
+//         }
+//       }
+//       .filter-show-work {
+//         float: right;
+//         .showork-title {
+//           font-size: 0.857em;
+//           color: $color-dark-blue5;
+//         }
+//         .due-date {
+//           font-size: 0.786em;
+//           color: $color-dark-blue5;
+//           margin-top: 3px;
+//         }
+//         .textrt {
+//           text-align: right;
+//         }
+//         .progressbar-wrap {
+//           .progressbar {
+//             background-color: $color-white;
+//             height: 5px;
+//             @include border-radius(20px);
+//             margin: 40px 0 0 0;
+//             text-align: center;
+//             .left-bar {
+//               width: 50%;
+//               float: left;
+//               .circle {
+//                 background-color: $color-dark-blue7;
+//               }
+//               .blue-bar {
+//                 background-color: $color-dark-blue7;
+//                 height: 5px;
+//                 display: block;
+//               }
+//             }
+//             .right-bar {
+//               width: 50%;
+//               float: right;
+//               .blue-bar {
+//                 background-color: $color-dark-blue8;
+//                 height: 5px;
+//                 display: block;
+//               }
+//             }
+//             .circle {
+//               width: 16px;
+//               height: 16px;
+//               background-color: $color-dark-blue8;
+//               display: block;
+//               @include border-radius(50%);
+//               margin-top: -6px;
+//               border: 4px solid $color-white;
+//               @include box-shadow(0px 1px 4px $left-panel);
+//               position: relative;
+//               .progress-tooltip {
+//                 visibility: hidden;
+//               }
+//               &:hover {
+//                 .progress-tooltip {
+//                   position: absolute;
+//                   visibility: visible;
+//                   bottom: 22px;
+//                   right: -24px;
+//                   z-index: 3;
+//                   width: 58px;
+//                   height: 25px;
+//                   line-height: 25px;
+//                   font-size: 0.786em;
+//                   background-color: $color-white;
+//                   @include border-radius(8%);
+//                   color: $pagination-color;
+//                   .arrow-bottom {
+//             			  width: 0;
+//             			  height: 0;
+//             			  border-left: 7px solid transparent;
+//             			  border-right: 7px solid transparent;
+//             			  border-top: 7px solid $color-white;
+//             				position: absolute;
+//             				top: 25px;
+//             				right: 21px;
+//             				z-index: 2;
+//             			}
+//                 }
+//               }
+//             }
+//           }
+//           .progress-days {
+//             font-size: 0.857em;
+//             color: $color-light-blue10;
+//             .days {
+//               width: 13.1%;
+//               float: left;
+//               text-align: center;
+//               &:first-child {
+//                 text-align: left;
+//                 width: 4%;
+//                 .devider-line {
+//                   margin: initial;
+//                   margin-bottom: 10px;
+//                 }
+//               }
+//               &:last-child {
+//                 text-align: right;
+//                 float: right;
+//                 width: 4%;
+//                 .devider-line {
+//                   margin-right: 0;
+//                 }
+//               }
+//               .devider-line {
+//                 background-color: $left-panel;
+//                 width: 1px;
+//                 height: 4px;
+//                 display: block;
+//                 margin: auto;
+//                 margin-bottom: 10px;
+//               }
+//             }
+//           }
+//         }
+//         .advance-filter-title {
+//           font-size: 0.857em;
+//           text-transform: uppercase;
+//           color: $color-light-blue10;
+//           margin: 37px 0 0 0;
+//         }
+//         .filter-form {
+//           .form-group {
+//             margin: 16px 0;
+//             .control-label {
+//               width: 30%;
+//               font-size: 0.857em;
+//               color: $color-dark-blue1;
+//             }
+//             .input-wrap {
+//               width: 65%;
+//               float: left;
+//               .inputleft {
+//                 padding: 0 7px 0 0;
+//               }
+//               .inputright {
+//                 padding: 0 0 0 7px;
+//                 position: relative;
+//                 .calendar-icon {
+//                   position: absolute;
+//                   top: 6px;
+//                   right: 8px;
+//                   font-size: 21px;
+//                   color: $calendar-color;
+//                   pointer-events: none;
+//                   &.disabled {
+//                     color: $color-light-blue12;
+//                   }
+//                 }
+//               }
+//             }
+//           }
+//         }
+//         .exclude-wrap {
+//           .check-exclude {
+//             font-size: 0.857em;
+//             color: $color-dark-blue3;
+//             margin-top: 30px;
+//             &:before {
+//               background-color: $color-white;
+//               width: 17px;
+//               height: 17px;
+//             }
+//           }
+//           :checked + .check-label:before {
+//             width: 17px;
+//             height: 17px;
+//             font-size: 15px;
+//             line-height: 15px;
+//           }
+//         }
+//         .wild-card-text {
+//           font-size: 0.857em;
+//           color: $color-light-blue10;
+//           margin-top: 25px;
+//           line-height: 24px;
+//           .icon-info {
+//             font-size: 19px;
+//             color: $color-light-blue13;
+//             float: left;
+//             margin-right: 6px;
+//           }
+//         }
+//       }
+//       .filter-btn-group {
+//         margin: 27px 0 20px 0;
+//         .marginrt {
+//           margin-right: 16px;
+//         }
+//       }
+//     }
+//   }
+//   .apply-filter {
+//     padding: 9px 26px;
+//   }
+// }

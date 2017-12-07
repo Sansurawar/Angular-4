@@ -1,0 +1,1926 @@
+/*------- Order Page Style -------*/
+.filter-greybox {
+  background-color: $color-light-blue6;
+  padding: 17px 0 18px 0;
+  border-bottom: 2px solid $color-light-blue9;
+  margin-bottom: 24px;
+  .filter-title {
+    font-size: 1.143em;
+    padding: 0;
+    color: $color-dark-blue3;
+    line-height: 32px;
+  }
+  .filter-select-form {
+    padding-left: 0;
+    .cs-placeholder {
+      border: 1px solid $color-light-blue8;
+    }
+  }
+  .filter-collaps {
+    float: right;
+    text-align: right;
+    padding-right: 0;
+    a {
+      display: inline-block;
+      .collaps-icon {
+        font-size: 35px;
+        color: $color-light-blue10;
+      }
+    }
+  }
+  .filter-mid-blue {
+    background-color: $color-light-blue5;
+    padding-top: 14px;
+    padding-bottom: 12px;
+    margin: 18px 0 20px 0;
+    .filter-descrip {
+      .descrip {
+        font-size: 0.857em;
+        margin-bottom: 2px;
+        &:first-child {
+          margin-bottom: 7px;
+        }
+      }
+    }
+    .filter-expand {
+      .title {
+        font-size: 1em;
+        text-transform: uppercase;
+        color: $color-light-blue10;
+        padding-left: 0;
+      }
+      .clearall {
+        font-size: 0.857em;
+        text-align: right;
+        padding-right: 0;
+        margin-top: 6px;
+        a {
+          color: $color-dark-blue3;
+          text-decoration: underline;
+        }
+      }
+      .status {
+        width: 21%;
+        border-right: 1px solid $color-dark-blue6;
+        padding-right: 0;
+        .status-title {
+          font-size: 0.857em;
+          color: $color-dark-blue5;
+        }
+        ul.status-check-list {
+          list-style: none;
+          margin: 0;
+          max-height: 370px;
+          overflow: scroll;
+          li {
+            margin: 21px 0;
+            .check-wrap {
+              .check-label {
+                font-size: 0.857em;
+                color: $color-dark-blue3;
+                display: inline-block;
+                &:before {
+                  background-color: $color-white;
+                  width: 17px;
+                  height: 17px;
+                }
+              }
+              :checked + .check-label:before {
+                width: 17px;
+                height: 17px;
+                font-size: 15px;
+                line-height: 15px;
+              }
+            }
+          }
+        }
+      }
+      .filter-show-work {
+        float: right;
+        .showork-title {
+          font-size: 0.857em;
+          color: $color-dark-blue5;
+        }
+        .due-date {
+          font-size: 0.786em;
+          color: $color-dark-blue5;
+          margin-top: 3px;
+        }
+        .textrt {
+          text-align: right;
+        }
+        .progressbar-wrap {
+          .progressbar {
+            background-color: $color-white;
+            height: 5px;
+            @include border-radius(20px);
+            margin: 40px 0 0 0;
+            text-align: center;
+            .left-bar {
+              width: 50%;
+              float: left;
+              .circle {
+                background-color: $color-dark-blue7;
+              }
+              .blue-bar {
+                background-color: $color-dark-blue7;
+                height: 5px;
+                display: block;
+              }
+            }
+            .right-bar {
+              width: 50%;
+              float: right;
+              .blue-bar {
+                background-color: $color-dark-blue8;
+                height: 5px;
+                display: block;
+              }
+            }
+            .circle {
+              width: 16px;
+              height: 16px;
+              background-color: $color-dark-blue8;
+              display: block;
+              @include border-radius(50%);
+              margin-top: -6px;
+              border: 4px solid $color-white;
+              @include box-shadow(0px 1px 4px $left-panel);
+              position: relative;
+              .progress-tooltip {
+                visibility: hidden;
+              }
+              &:hover {
+                .progress-tooltip {
+                  position: absolute;
+                  visibility: visible;
+                  bottom: 22px;
+                  right: -24px;
+                  z-index: 3;
+                  width: 58px;
+                  height: 25px;
+                  line-height: 25px;
+                  font-size: 0.786em;
+                  background-color: $color-white;
+                  @include border-radius(8%);
+                  color: $pagination-color;
+                  .arrow-bottom {
+            			  width: 0;
+            			  height: 0;
+            			  border-left: 7px solid transparent;
+            			  border-right: 7px solid transparent;
+            			  border-top: 7px solid $color-white;
+            				position: absolute;
+            				top: 25px;
+            				right: 21px;
+            				z-index: 2;
+            			}
+                }
+              }
+            }
+          }
+          .progress-days {
+            font-size: 0.857em;
+            color: $color-light-blue10;
+            .days {
+              width: 13.1%;
+              float: left;
+              text-align: center;
+              &:first-child {
+                text-align: left;
+                width: 4%;
+                .devider-line {
+                  margin: initial;
+                  margin-bottom: 10px;
+                }
+              }
+              &:last-child {
+                text-align: right;
+                float: right;
+                width: 4%;
+                .devider-line {
+                  margin-right: 0;
+                }
+              }
+              .devider-line {
+                background-color: $left-panel;
+                width: 1px;
+                height: 4px;
+                display: block;
+                margin: auto;
+                margin-bottom: 10px;
+              }
+            }
+          }
+        }
+        .advance-filter-title {
+          font-size: 0.857em;
+          text-transform: uppercase;
+          color: $color-light-blue10;
+          margin: 37px 0 0 0;
+        }
+        .filter-form {
+          .form-group {
+            margin: 16px 0;
+            .control-label {
+              width: 30%;
+              font-size: 0.857em;
+              color: $color-dark-blue1;
+            }
+            .input-wrap {
+              width: 65%;
+              float: left;
+              .inputleft {
+                padding: 0 7px 0 0;
+              }
+              .inputright {
+                padding: 0 0 0 7px;
+                position: relative;
+                .calendar-icon {
+                  position: absolute;
+                  top: 6px;
+                  right: 8px;
+                  font-size: 21px;
+                  color: $calendar-color;
+                  pointer-events: none;
+                  &.disabled {
+                    color: $color-light-blue12;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .exclude-wrap {
+          .check-exclude {
+            font-size: 0.857em;
+            color: $color-dark-blue3;
+            margin-top: 30px;
+            &:before {
+              background-color: $color-white;
+              width: 17px;
+              height: 17px;
+            }
+          }
+          :checked + .check-label:before {
+            width: 17px;
+            height: 17px;
+            font-size: 15px;
+            line-height: 15px;
+          }
+        }
+        .wild-card-text {
+          font-size: 0.857em;
+          color: $color-light-blue10;
+          margin-top: 25px;
+          line-height: 24px;
+          .icon-info {
+            font-size: 19px;
+            color: $color-light-blue13;
+            float: left;
+            margin-right: 6px;
+          }
+        }
+      }
+      .filter-btn-group {
+        margin: 27px 0 20px 0;
+        .marginrt {
+          margin-right: 16px;
+        }
+      }
+    }
+  }
+  .apply-filter {
+    padding: 9px 26px;
+  }
+}
+
+.sortby-section {
+  margin: 0 0 17px 0;
+  .soft-select-form {
+    width: 16%;
+    float: right;
+  }
+  .sortby {
+    font-size: 0.857em;
+    float: right;
+    color: $color-dark-blue4;
+    margin: 6px 11px 0 0;
+    line-height: 25px;
+  }
+}
+.filter-select-checkform {
+  margin-top: 30px;
+  .form-group {
+    margin: 22px 0;
+    .control-label {
+      width: 15%;
+      float: left;
+      font-size: 0.929em;
+      color: $color-dark-blue1;
+      font-weight: 400;
+      margin-top: 11px;
+    }
+    .select-form-wrap {
+      width: 82%;
+      position: relative;
+      float: left;
+      .whitebox {
+        background-color: $color-white;
+        padding: 5px 20px 5px 0;
+        position: relative;
+        .selected-checked {
+          background-color: $color-light-blue3;
+          font-size: 0.857em;
+          padding: 5px 5px 5px 8px;
+          float: left;
+          margin: 0 5px;
+          .closeicon {
+            font-size: 16px;
+            margin-left: 8px;
+            float: right;
+            color: $icon-color;
+          }
+        }
+        .arrow-down {
+          position: absolute;
+          top: 6px;
+          right: 8px;
+          font-size: 13px;
+          color: $icon-color;
+          padding: 5px 3px;
+        }
+      }
+      .filter-checkform-expand {
+        width: 100%;
+        background-color: $color-white;
+        position: absolute;
+        top: 37px;
+        left: 0;
+        z-index: 3;
+        ul.checklist {
+          list-style: none;
+          margin: 0;
+          max-height: 202px;
+          overflow: scroll;
+          li {
+            margin: 10px 0;
+            padding: 0 10px;
+            &:first-child {
+              border-bottom: 1px solid $color-light-blue3;
+              padding-bottom: 8px;
+            }
+            .check-wrap {
+              .check-label {
+                font-size: 0.929em;
+                color: $color-dark-blue3;
+                display: inline-block;
+                &:before {
+                  background-color: $color-white;
+                  width: 19px;
+                  height: 19px;
+                }
+              }
+              :checked + .check-label:before {
+                width: 19px;
+                height: 19px;
+                font-size: 17px;
+                line-height: 17px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+/*------- Order WOID Details Page Style -------*/
+.woid-tabs-greybox {
+  background-color: $color-light-blue6;
+  padding-top: 17px;
+  .topmargin {
+    margin-top: 10px;
+  }
+  .launchaudit-btn {
+    font-size: 0.857em;
+    float: right;
+    margin-right: 15px;
+  }
+  .workid-whitebox {
+    background-color: $color-white;
+    padding: 12px 10px 8px 10px;
+    margin-top: 16px;
+    @include box-shadow(0px 2px 20px $search-input-shadow);
+    .woid-id-number {
+      font-size: 1em;
+      color: $color-dark-blue3;
+      text-align: center;
+      padding: 7px 0;
+    }
+    .arrow-previous {
+      padding-left: 3px;
+      margin-top: 1px;
+      i {
+        font-size: 29px;
+        color: $icon-color;
+        font-weight: bold;
+      }
+    }
+    .arrow-next {
+      text-align: right;
+      padding-right: 3px;
+      margin-top: 1px;
+      i {
+        font-size: 29px;
+        color: $icon-color;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.navicon-margin {
+  margin: 12px 0 12px 0;
+}
+ul.order-subtabs {
+  margin-top: 28px;
+  border-bottom: none;
+  li {
+    a {
+      color: $btn-primary;
+      padding: 11px 24px;
+      // margin-left: -8px;
+      @include border-top-left-radius (2px);
+      @include border-top-right-radius (2px);
+      border: none;
+      margin-right: 5px;
+      &:hover, &:focus {
+        background-color: $body-color;
+        // border: 1px solid $body-color;
+        border: none;
+      }
+    }
+    &:first-child a {
+      padding: 11px 16px;
+    }
+    &.active a {
+      background-color: $body-color;
+      color: $left-panel;
+      border: none;
+      &:hover, &:focus {
+        background-color: $body-color;
+        border: none;
+      }
+      &:first-child {
+        margin-left: 0px;
+      }
+    }
+  }
+  &.bigtab {
+    li a {
+      padding: 11px 29px;
+    }
+  }
+}
+.action-links {
+  margin-top: 37px;
+  a {
+    font-size: 0.857em;
+    float: right;
+    margin-left: 18px;
+    .action-icon {
+      font-size: 17px;
+      color: $icon-color4;
+      margin-right: 5px;
+      float: left;
+      &.eye {
+        font-size: 13px;
+        margin-top: 2px;
+      }
+    }
+  }
+  &.bigsize {
+    margin-top: 27px;
+    a {
+      font-size: 1em;
+      .action-icon {
+        font-size: 18px;
+        margin-top: 1px;
+      }
+    }
+  }
+}
+
+.cancel {
+  margin-left: 21px;
+}
+
+.policy-dropdown {
+  margin: 32px 0 21px 0;
+  .policy-number {
+    font-size: 0.857em;
+    color: $color-dark-blue4;
+    margin: 6px 9px 0 0;
+    line-height: 25px;
+    float: left;
+  }
+  .policy-select-form {
+    width: 17%;
+    float: left;
+  }
+}
+
+
+/*------- Order WOID Details Collapsible Form Style -------*/
+.collapse-form {
+  margin-bottom: 38px;
+  .title-bar {
+    background-color: $table-title-color;
+    font-size: 0.857em;
+    color: $color-white;
+    padding: 13px 0px 12px 0px;
+    font-weight: 100;
+    text-transform: uppercase;
+    @include font-montserrat;
+    @include border-top-left-radius (5px);
+    @include border-top-right-radius (5px);
+    position: relative;
+    .icon-collapsed {
+      font-size: 29px;
+      color: $color-white;
+      position: absolute;
+      top: 6px;
+      right: 5px;
+      padding: 4px;
+    }
+    .title {
+      border-left: 1px solid $color-light-blue14;
+      padding-left: 30px;
+      line-height: 23px;
+      padding-right: 40px;
+      &:first-child {
+        border-left: none;
+      }
+    }
+  }
+  .column-50 {
+    width: 50%;
+    float: left;
+    &.border-devided {
+      border-right: 1px solid $color-light-blue15;
+      border-left: 1px solid $color-light-blue15;
+      margin-right: -1px;
+      margin-top: 20px;
+      margin-bottom: 19px;
+      &:first-child {
+        border-left: none;
+      }
+      &:last-child {
+        border-right: none;
+      }
+    }
+  }
+  .column-33 {
+    width: 33%;
+    float: left;
+    &.border-devided {
+      border-right: 1px solid $color-light-blue15;
+      border-left: 1px solid $color-light-blue15;
+      margin-right: -1px;
+      margin-top: 20px;
+      margin-bottom: 19px;
+      &:first-child {
+        border-left: none;
+      }
+      &:last-child {
+        border-right: none;
+      }
+    }
+  }
+  .collapse-expand-container {
+    background-color: $color-white;
+    border: 1px solid $table-border2;
+    border-top: none;
+    @include border-bottom-left-radius (5px);
+    @include border-bottom-right-radius (5px);
+    .woid-form {
+      padding: 0 29px 0 28px;
+      .form-group {
+        margin: 10px 0;
+        &.margin-none {
+          margin-top: 0;
+        }
+        label {
+          width: 29%;
+          font-size: 0.929em;
+          margin: 0;
+          line-height: 30px;
+          float: left;
+          color: $color-dark-blue3;
+          &.label-big {
+            width: 40%;
+          }
+        }
+        .input-div {
+          width: 62%;
+          float: left;
+          position: relative;
+          &.small-div {
+            width: 60%;
+          }
+          .form-control {
+            font-size: 0.929em;
+            border: 1px solid $table-border;
+            height: 30px;
+            padding: 0px 10px;
+            color: $form-input;
+            line-height: 26px;
+          }
+          .input-small {
+            width: 48%;
+            float: left;
+            margin-right: 6px;
+            &:last-child {
+              margin-right: 0;
+            }
+          }
+          .textarea {
+            width: 100%;
+            font-size: 0.857em;
+            border: 1px solid $table-border;
+            height: 60px;
+            padding: 4px 10px;
+            resize: none;
+          }
+          .calendar-input {
+            width: 143px;
+            position: relative;
+            .calendar-icon {
+              position: absolute;
+              top: 4px;
+              right: 6px;
+              font-size: 20px;
+              color: $calendar-color;
+              pointer-events: none;
+              &.disabled {
+                color: $color-light-blue12;
+              }
+            }
+          }
+          .period-to {
+            padding: 5px 10px;
+            float: left;
+            color: $grey-dark3;
+          }
+        }
+      }
+    }
+  }
+}
+.title-tablet-mobile {
+  font-size: 1em;
+  text-transform: uppercase;
+  margin-left: 20px;
+  line-height: 23px;
+}
+
+
+/*------- WOID Details-Progress Report Tab Style -------*/
+.insuredtl-whitebox {
+  background-color: $color-white;
+  margin-top: 32px;
+  padding: 20px 10px 18px 10px;
+  border: 1px solid $table-border2;
+  .insure-label {
+    font-size: 0.857em;
+    color: $color-light-blue10;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    font-weight: 400;
+  }
+  .insure-value {
+    font-size: 0.929em;
+    color: $color-dark-blue3;
+  }
+}
+
+.progressrpt-table-whitebox {
+  background-color: $color-white;
+  margin-top: 24px;
+  padding-bottom: 17px;
+  border: 1px solid $table-border2;
+  .grid-table {
+    ul li {
+      &:last-child {
+        border-bottom: 1px solid $table-border2;
+      }
+      .col {
+        font-size: 0.929em;
+        padding: 15px 3px;
+      }
+    }
+  }
+}
+.add-report-form {
+  margin-top: 30px;
+  padding: 0 22px;
+  .report-title {
+    font-size: 0.857em;
+    margin-bottom: 19px;
+    color: $color-light-blue10;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+  .report-form {
+    .form-group {
+      margin-bottom: 14px;
+      .control-label {
+        width: 12%;
+        font-size: 0.857em;
+      }
+      .input-wrap {
+        width: 87%;
+        float: left;
+        .cs-select {
+          font-size: 0.857em;
+        }
+        .textarea {
+          font-size: 0.857em;
+        }
+      }
+    }
+  }
+  .btn-length {
+    width: 114px;
+    margin-top: 10px;
+  }
+  .margin-left {
+    margin-left: 17px;
+  }
+}
+
+
+
+/*------- WOID Details - Documents Page Style -------*/
+.document-sort {
+  margin: 24px 0 9px 0;
+  .sortby-label {
+    float: right;
+    font-size: 0.857em;
+    margin: 8px 11px 8px 0;
+  }
+  .sortby-form {
+    width: 12%;
+    float: right;
+    .cs-select span {
+      font-size: 0.857em;
+      padding: 5px 5px 5px 8px;
+    }
+  }
+  .inputbox {
+    width: 16%;
+    position: relative;
+    float: right;
+    margin-left: 16px;
+    .input {
+      font-size: 0.857em;
+      padding: 5px 20px 5px 10px;
+      height: 30px;
+    }
+    .searchicon {
+      position: absolute;
+      top: 4px;
+      right: 8px;
+      font-size: 16px;
+      padding: 3px;
+      color: $color-dark-blue5;
+      font-weight: 400;
+    }
+  }
+}
+
+.document-whitebox {
+  background-color: $color-white;
+  padding: 22px 32px 36px;
+  border: 1px solid $table-border2;
+  .mandatory-doc-title {
+    font-size: 0.857em;
+    color: $color-light-blue10;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .devided-line {
+    margin: 12px 0 32px 0;
+  }
+  ul.document-list {
+    list-style: none;
+    margin: 0;
+    li {
+      float: left;
+      margin: 0 64px 20px 0;
+      .doc-icon {
+        float: left;
+        width: 36px;
+      }
+      .link {
+        font-size: 0.929em;
+        margin: 15px 0 0 11px;
+        float: left;
+        color: $color-dark-blue3;
+        text-decoration: underline;
+      }
+      .doc-check {
+        float: left;
+        margin: 11px 10px 0 0;
+      }
+    }
+  }
+  .btn-docs {
+    margin-top: 44px;
+    .btn-length {
+      width: 195px;
+      margin: 0 21px 8px 0;
+    }
+  }
+}
+
+
+/*------- WOID Details - Appointment Tab - No Records Page Style -------*/
+.no-appointment-message {
+  font-size: 1.143em;
+  border: 1px solid $table-border2;
+  color: $color-light-blue2;
+  text-align: center;
+  padding: 37px 10px;
+  margin-top: 24px;
+}
+.btn-scheduleapp-wrap {
+  text-align: center;
+  margin-top: 29px;
+  .btn-size {
+    font-size: 0.929em;
+  }
+}
+
+
+/*------- WOID Details - Appointment Tab - Current Appointment Page Style -------*/
+.appoint-current-whitebox {
+  background-color: $color-white;
+  margin: 24px 0 35px 0;
+  border: 1px solid $color-light-blue15;
+  padding: 0;
+  position: relative;
+  .date-label {
+    width: 48px;
+    height: 60px;
+    position: absolute;
+    top: 0;
+    left: 18px;
+    background-color: $color-light-blue12;
+    font-size: 1.500em;
+    text-align: center;
+    padding-top: 9px;
+    .month {
+      font-size: 0.429em;
+      display: block;
+      font-weight: bold;
+    }
+  }
+  .border-btm {
+    border-bottom: 1px solid $color-light-blue26;
+  }
+  .appointment-dtl-left {
+    width: 72%;
+    float: left;
+    border-right: 1px solid $color-light-blue26;
+    .appoint-time-slot {
+      margin-top: 36px;
+      .locationicon {
+        font-size: 35px;
+        float: left;
+        color: $icon-color;
+        margin: 34px 55px 0 30px;
+      }
+    }
+  }
+  .appoint-time-column {
+    margin-right: 65px;
+    float: left;
+    .time-label {
+      font-size: 0.929em;
+      color: $color-light-blue2;
+      display: block;
+      font-weight: 400;
+      margin-bottom: 1px;
+    }
+    .time-big {
+      font-size: 1.357em;
+    }
+    .client-time {
+      font-size: 0.857em;
+      margin-top: 1px;
+    }
+    .clock-hour {
+      font-size: 0.929em;
+      color: $color-light-blue10;
+      margin-top: 12px;
+      .clock {
+        font-size: 15px;
+        margin-right: 4px;
+        float: left;
+        color: $icon-color2;
+        margin-top: 1px;
+      }
+    }
+  }
+  .view-agenda-link {
+    font-size: 0.857em;
+    margin-top: 45px;
+    float: left;
+  }
+  .appoint-namepolicy-note {
+    border-top: 1px solid $color-light-blue26;
+    margin-top: 14px;
+    font-size: 0.786em;
+
+    .appoint-name {
+      width: 13%;
+      margin-left: 30px;
+      float: left;
+      padding-top: 15px;
+    }
+    .appoint-address {
+      width: 25%;
+      margin-left: 5px;
+      float: left;
+      color: $btn-primary;
+      padding-top: 15px;
+    }
+    .policy-type {
+      width: 18%;
+      float: left;
+      border-left: 1px solid $color-light-blue26;
+      margin-left: 15px;
+      margin-right: 5px;
+      padding: 15px 0 5px 37px;
+    }
+    .policy-label {
+      color: $color-light-blue10;
+      font-weight: 400;
+      margin-bottom: 3px;
+    }
+    .policy-notes {
+      width: 33%;
+      float: left;
+      padding-top: 15px;
+      padding-bottom: 5px;
+    }
+    .policy-edit {
+      width: 3%;
+      float: left;
+      font-size: 17px;
+      margin: 42px 0 0 5px;
+      color: $icon-color2;
+    }
+  }
+
+  .status-colum {
+    width: 25%;
+    float: left;
+    margin-left: 32px;
+    .status-label {
+      font-size: 0.929em;
+      color: $color-light-blue2;
+      display: block;
+      font-weight: 400;
+      margin-bottom: 1px;
+      padding-top: 34px;
+    }
+    .schedule-big {
+      font-size: 1.500em;
+    }
+    .post-sent {
+      font-size: 0.786em;
+    }
+    .link-confirm {
+      margin: 26px 0 0 0;
+      a {
+        font-size: 0.857em;
+        margin-right: 34px;
+        float: left;
+        &:first-child {
+          width: 20%;
+        }
+        &:last-child {
+          margin-right: 0px;
+        }
+        .arrowdown {
+          // display: table;
+          margin: 8px 0 0 16px;
+        }
+      }
+    }
+  }
+}
+
+/*------- WOID Details - Appointment Tab - Expanded View Page Style -------*/
+.appoint-form {
+  margin-top: 35px;
+  .form-group {
+    margin-bottom: 28px;
+    .control-label {
+      width: 14%;
+      @include font-montserrat;
+      font-size: 0.857em;
+      color: $color-light-blue10;
+      text-transform: uppercase;
+      font-weight: 400;
+      line-height: 18px;
+      margin: 0 3px 0 16px;
+      padding-left: 14px;
+      &.topmargin {
+        margin: 25px 0 10px 16px;
+      }
+    }
+    .input-wrap {
+      width: 81%;
+      float: left;
+      .form-control {
+        font-size: 0.857em;
+      }
+      .radio-label {
+        width: 12%;
+        .check-label {
+          font-size: 0.857em;
+          line-height: 19px;
+        }
+      }
+      .textarea {
+        height: 71px;
+        font-size: 0.857em;
+        color: $color-dark-blue3;
+      }
+      .checklabel {
+        .check-label {
+          font-size: 0.857em;
+        }
+      }
+      .post-spacing {
+        padding-left: 0;
+        margin-right: 9px;
+      }
+    }
+    &.margin-top-30 {
+      margin-top: 30px;
+    }
+  }
+  .btngroups {
+    margin: 38px 0 45px 4px;
+    .btn-size {
+      min-width: 120px;
+      font-size: 0.929em;
+      margin-left: 11px;
+      &:first-child {
+        margin-left: 26px;
+      }
+    }
+  }
+}
+.topmargin-form {
+  margin-top: 33px;
+}
+.border-right {
+  border-right: 1px solid $color-light-blue26;
+}
+.border-left {
+  border-left: 1px solid $color-light-blue26;
+  margin-left: -1px;
+}
+.latterdilivery-record {
+  border-bottom: 1px solid $color-light-blue26;
+  border-top: 1px solid $color-light-blue26;
+  .latter-delivery-info {
+    margin-left: 15px;
+    padding: 28px 0 14px 0;
+    padding-top: 28px;
+    .latter-title {
+      @include font-montserrat;
+      font-size: 0.857em;
+      color: $color-light-blue10;
+      text-transform: uppercase;
+      font-weight: 400;
+      margin-bottom: 27px;
+    }
+    .letterdeli-form {
+      font-size: 0.929em;
+      margin-bottom: 15px;
+      .label-left {
+        font-weight: normal;
+        padding-right: 0;
+      }
+      .adress-label {
+        margin-bottom: 16px;
+        font-weight: normal;
+        padding-right: 0;
+      }
+    }
+  }
+  .appoint-records {
+    padding-top: 28px;
+    margin: 0 0 0 21px;
+    .records-title {
+      @include font-montserrat;
+      font-size: 0.857em;
+      color: $color-light-blue10;
+      text-transform: uppercase;
+      font-weight: 400;
+      margin-bottom: 27px;
+    }
+    .record-list {
+      font-size: 0.929em;
+      margin-bottom: 21px;
+      .edit-column {
+        padding-left: 8px;
+        .editicon {
+          font-size: 17px;
+          color: $icon-color3;
+        }
+      }
+      .paddrt-none {
+        padding: 0;
+      }
+    }
+  }
+}
+
+
+/*------- WOID Details - Records Tab - View Page Style -------*/
+.records-saved-selection {
+  margin-top: 32px;
+  .label-select {
+    font-size: 1.000em;
+    padding: 6px 38px 7px 15px;
+    float: left;
+  }
+}
+.records-divider {
+  border-top: 1px solid $color-light-blue16;
+  margin: 32px 0 28px 0;
+}
+.selectrecord-title {
+  margin-bottom: 28px;
+}
+.select-record-wrap {
+  border-bottom: 1px solid $color-light-blue16;
+  .auditype-title {
+    font-size: 0.857em;
+    color: $color-light-blue10;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin: 5px 0 24px 40px;
+  }
+  .record-requested {
+    border-left: 1px solid $color-light-blue16;
+    padding-left: 5px;
+    padding-bottom: 24px;
+  }
+  ul.auditype-checklist {
+    list-style: none;
+    padding-left: 40px;
+    margin: 0;
+    padding-top: 1px;
+    li {
+      margin: 0 0 22px 0;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    &.record-request-scroll {
+      height: 480px;
+      overflow: auto;
+    }
+  }
+}
+
+.savecancel-btn {
+  margin-top: 32px;
+  .btn-width-same {
+    width: 114px;
+    margin-right: 17px;
+  }
+}
+
+
+
+/*------- New Actions Page Style -------*/
+.new-actions {
+  width: 540px;
+  .newaction-head {
+    background-color: $color-dark-blue5;
+    padding: 8px 28px;
+    .heading {
+      font-size: 1em;
+      text-transform: uppercase;
+      @include font-montserrat;
+      color: $color-white;
+    }
+  }
+  .newaction-form {
+    padding:23px 28px 20px 28px;
+    .form-group {
+      margin-bottom: 20px;
+      .control-label {
+        width: 18%;
+        font-size: 0.929em;
+        float: left;
+        margin: 0;
+        margin-top: 6px;
+        line-height: 15px;
+        color: $color-dark-blue1;
+        .optional {
+          color: $color-light-blue20;
+        }
+        &.margin-top-none {
+          margin-top: 0;
+        }
+      }
+      .input-wrap {
+        width: 82%;
+        float: left;
+        .form-control {
+          border: 1px solid $color-light-blue8;
+          font-size: 0.857em;
+        }
+        .calendar-icon {
+          font-size: 22px;
+          top: 5px;
+          right: 22px;
+        }
+        .textarea {
+          height: 94px;
+        }
+        .max-words {
+          font-size: 0.714em;
+          color: $color-light-blue20;
+          text-align: right;
+          display: block;
+          margin-top: 8px;
+        }
+        .setlabel {
+          width: 88px;
+          padding: 3px 0 0 18px;
+        }
+        .radiobtn {
+          font-size: 0.857em;
+          .check-label {
+            line-height: 19px;
+          }
+        }
+      }
+    }
+    .savecancel-buttons {
+      margin-top: 16px;
+      .btn {
+        width: 120px;
+        margin-right: 16px;
+      }
+    }
+  }
+}
+
+
+/*------- All Actions Page Style -------*/
+.head-closeicon {
+  float: right;
+  line-height: 22px;
+  i {
+    font-size: 22px;
+    color: $color-dark-blue5;
+  }
+}
+.showcompleted-section {
+  padding: 18px 0;
+  .showcomplete-action {
+    font-size: 0.857em;
+    line-height: 17px;
+  }
+  .margin-top {
+    margin-top: 13px;
+  }
+  .myaction-assign {
+    float: right;
+    margin-top: 12px;
+    .myassign-text {
+      float: left;
+      font-size: 0.857em;
+    }
+    .togglebtn {
+      width: 40px;
+      margin: 0 10px;
+      float: left;
+      .onoffswitch-inner:before {
+        content: "";
+        background-color: $toggle-on-stage;
+      }
+      .onoffswitch-inner:after {
+        content: "";
+        background-color: $toggle-on-stage;
+      }
+      .onoffswitch-switch {
+        right: 22px;
+      }
+      .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+          right: 0px;
+      }
+    }
+  }
+  .search-wrap {
+    float: right;
+    border-left: 1px solid $color-dark-blue11;
+    margin-left: 32px;
+    padding: 2px 0 2px 32px;
+    position: relative;
+    .search-action {
+      width: 170px;
+      background-color: $color-dark-blue10;
+      font-size: 0.929em;
+      border: 1px solid $color-dark-blue11;
+      padding: 8px 10px;
+    }
+    .iconsearch {
+      position: absolute;
+      top: 7px;
+      right: 6px;
+      font-size: 17px;
+      padding: 3px;
+      color: $color-dark-blue5;
+      font-weight: 400;
+    }
+  }
+}
+
+.subtabs-bg {
+  background-color: $color-light-blue12;
+  @include box-shadow(0px 2px 10px $color-light-blue21 inset);
+}
+.margin-top-40 {
+  margin-top: 40px;
+}
+.allactions-table {
+  ul {
+    li {
+      .col {
+        color: $color-dark-blue3;
+      }
+      .iconmarked {
+        font-size: 20px;
+        margin-left: 14px;
+        color: $btn-primary;
+        display: inline-block;
+        margin-top: -3px;
+        line-height: 18px;
+      }
+      .woidid {
+        color: $btn-primary;
+      }
+      .delete {
+        margin-right: 34px;
+        float: right;
+      }
+      .marginleft {
+        margin-left: 12px;
+      }
+      &:hover {
+        background-color: $color-white;
+      }
+      .tooltip-grid {
+        position: relative;
+        display: inline-block;
+        .tooltip-text {
+          visibility: hidden;
+          position: absolute;
+          top: -16px;
+          left: -23px;
+          z-index: 2;
+          width: 100px;
+          background-color: $color-light-blue12;
+          text-align: center;
+          padding: 3px 10px;
+          color: $color-dark-blue3;
+          @include border-radius(2px);
+          &:after {
+            content: "";
+            position: absolute;
+            top:100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 6px;
+            border-style: solid;
+            border-color: $color-light-blue12 transparent transparent transparent;
+          }
+        }
+        &:hover .tooltip-text {
+          visibility: visible;
+        }
+      }
+      &.read {
+        .col {
+          color: $grey-light3;
+        }
+        .iconmarked {
+          color: $grey-light3;
+        }
+        .tooltip-grid {
+          .tooltip-text {
+            visibility: hidden;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/*------- Agenda Page Style -------*/
+.agendadate {
+  margin-top: 30px;
+  .datelabel {
+    min-width: 43px;
+    font-size: 0.929em;
+    float: left;
+    font-weight: normal;
+    margin: 9px 0 8px 0;
+  }
+  .dateselect {
+    width: 152px;
+    float: left;
+    .calendr {
+      font-size: 21px;
+      top: 7px;
+      right: 8px;
+    }
+    .bigfont {
+      font-size: 1.071em;
+      height: 38px;
+    }
+  }
+}
+.emailsummery {
+  width: 181px;
+  float: right;
+  margin-top: 30px;
+  .emailicon {
+    font-size: 13px;
+    color: $icon-color7;
+    position: absolute;
+    margin: 13px 0px 0 9px;
+    z-index: 2;
+  }
+  .cs-select {
+    .cs-placeholder {
+      padding-left: 27px;
+      color: $btn-primary;
+      font-size: 0.959em;
+      padding: 9px 5px 8px 31px;
+    }
+  }
+}
+.btngroup {
+  margin-top: 17px;
+  .btn {
+    font-size: 0.857em;
+    margin-left: 15px;
+    float: right;
+    padding: 8px 11px;
+  }
+}
+.agenda-table-wrap {
+  margin-top: 17px;
+  .agenda-endroute-top {
+    background-color: $color-white;
+    min-height: 103px;
+    padding-top: 19px;
+    .check-selectall {
+      margin-top: 16px;
+      font-size: 0.929em;
+    }
+    .showmap-label {
+      float: right;
+      margin: 15px 0 5px 0;
+    }
+    .btn-pins {
+      float: right;
+      margin-left: 25px;
+      font-size: 0.857em;
+      color: $color-dark-blue3;
+      text-align: center;
+      .pin-icon {
+        font-size: 44px;
+        display: block;
+        color: $btn-primary;
+        margin-bottom: 9px;
+      }
+      &.marginrt {
+        margin-right: 10px;
+      }
+    }
+  }
+  .start-label {
+    font-size: 1em;
+    min-width: 117px;
+    padding-left: 10px;
+    float: left;
+    font-weight: normal;
+    &.endlabel {
+      margin-top: 8px;
+    }
+  }
+  .start-selectform {
+    width: 78%;
+    float: left;
+    .cs-select {
+      .cs-placeholder {
+        font-size: 1.071em;
+      }
+    }
+  }
+  .agenda-table-mid {
+    background-color: $color-dark-blue13;
+    position: relative;
+    .leftbg {
+      background-color: $color-light-blue8;
+      height: 100%;
+      width: 120px;
+      position: absolute;
+    }
+    ul.timerlist {
+      margin: 0;
+      list-style: none;
+      position: relative;
+      &.scroll {
+        height: 1030px;
+        overflow: auto;
+      }
+      li {
+        position: relative;
+        border-top: 1px solid $color-dark-blue14;
+        height: 164px;
+        .timer-15-min {
+          position: relative;
+          height: 41px;
+          border-top: 1px dashed $color-dark-blue14;
+          visibility: hidden;
+          &:first-child {
+            border-top: none;
+          }
+          // &:first-child {
+          //   .drive-time-wrap {
+          //     bottom: -121px;
+          //   }
+          // }
+          &.visible {
+            visibility: visible;
+            .active-time {
+              color: $color-dark-blue3;
+            }
+          }
+          .userdtl-whitebx {
+            width: 75%;
+            float: left;
+            background-color: $color-white;
+            @include border-radius(5px);
+            @include box-shadow(1px 4px 14px $header-dropdown-shadow);
+            // min-height: 164px;
+            display: flex;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            left: 120px;
+            z-index: 5;
+            &.greybg {
+              background-color: $color-dark-blue15;
+              z-index: 3;
+              .blueshape-triangle {
+                border-top: 12px solid $dark-blue;
+              }
+            }
+            .blueshape-triangle {
+              width: 0;
+              height: 0;
+              position: absolute;
+              left: -13px;
+              top: 0;
+              border-top: 12px solid $grey-dark4;
+              border-left: 12px solid transparent;
+            }
+            .check-column {
+              width: 37px;
+              float: left;
+              text-align: center;
+            }
+            .middle-userdtl-column {
+              width: 86%;
+              float: left;
+              border-left: 1px solid $color-light-blue23;
+              border-right: 1px solid $color-light-blue23;
+              min-height: 164px;
+              .userdtl-row {
+                border-bottom: 1px solid $color-light-blue23;
+                // min-height: 88px;
+                &:last-child {
+                  border-bottom: 0;
+                }
+                .userdtl-column {
+                  width: 33.3%;
+                  float: left;
+                  padding: 11px 2px 2px 15px;
+                  border-left: 1px solid $color-light-blue23;
+                  border-right: 1px solid $color-light-blue23;
+                  margin-left: -1px;
+                  min-height: 80px;
+                  &:first-child, &:last-child {
+                    border-left: 0;
+                    border-right: 0;
+                  }
+                  .userdtl-time {
+                   width:35%;
+                   float: left;
+                   margin-right: 10px;
+                   margin-bottom: 0px;
+                   .form-control{
+                      height: 30px;
+                      font-size: 12px;
+                      padding: 7px 7px;
+                      @include border-radius(5px);
+                   }
+                  }
+                  .userdtl-time-btn{
+                    width: 20%;
+                    float: left;
+                    margin-top: 28px;
+                    text-align: center;
+                    height: 30px;
+                    i{
+                      font-size: 18px;
+                    }
+                    img{
+                      width: 18px;
+                      vertical-align: top;
+                      margin-right: 2px;
+                    }
+                  }
+                }
+                .locationicon {
+                  width: 38px;
+                  font-size: 40px;
+                  float: left;
+                  position: relative;
+                  margin-top: 8px;
+                  color: $color-light-blue24;
+                  small {
+                    font-size: 14px;
+                    position: absolute;
+                    top: 4px;
+                    left: 9px;
+                    color: $color-light-blue24;
+                    @include font-roboto;
+                    font-weight: 700;
+                    line-height: 18px;
+                  }
+                }
+                .woidnum-address {
+                  width: 79%;
+                  float: left;
+                  margin-top: 5px;
+                }
+                .woidnumber {
+                  font-size: 1.071em;
+                  color: $btn-primary;
+                  display: block;
+                  margin: 4px 0 3px 0;
+                }
+                .address {
+                  font-size: 0.786em;
+                  margin-bottom: 0;
+                }
+                .labels {
+                  font-size: 0.786em;
+                  color: $color-light-blue10;
+                  font-weight: normal;
+                  &.windowslot {
+                    margin-bottom: 10px;
+                  }
+                }
+                .appoint-time {
+                  font-size: 1.071em;
+                  margin-bottom: 3px;
+                  .editicon {
+                    font-size: 17px;
+                    color: $icon-color;
+                    margin-left: 8px;
+                  }
+                }
+                .date-small {
+                  font-size: 0.786em;
+                  margin-bottom: 5px;
+                  .label-grey {
+                    color: $color-light-blue10;
+                    margin: 0 2px 0 0;
+                    font-weight: normal;
+                  }
+                  &.blue {
+                    color: $btn-primary;
+                  }
+                  &.small-font {
+                    font-size: 0.714em;
+                    margin-bottom: 3px;
+                  }
+                }
+                .margintop {
+                  margin-top: 20px;
+                }
+                .note-descrip {
+                  width: 90%;
+                  font-size: 0.714em;
+                  float: left;
+                }
+                .edit-note {
+                  width: 20px;
+                  font-size: 17px;
+                  color: $icon-color;
+                  float: left;
+                  margin-top: 6px;
+                }
+                .username {
+                  font-size: 0.786em;
+                  display: block;
+                  margin-bottom: 5px;
+                  font-weight: 700;
+                }
+              }
+            }
+            .userdtl-location-column {
+              width: 47%;
+              float: left;
+              border-left: 1px solid $color-light-blue23;
+              border-right: 1px solid $color-light-blue23;
+              padding: 20px 0 5px 20px;
+              min-height: 80px;
+              &:last-child {
+                border-right: none;
+                margin-left: -1px;
+              }
+              .locationmap-icon {
+                width: 33px;
+                float: left;
+                font-size: 30px;
+                color: $color-light-blue24;
+              }
+              .lunch-note-descrip {
+                width: 85%;
+                float: left;
+                font-size: 0.786em;
+                .descrip {
+                  margin-bottom: 6px;
+                  &:last-child {
+                    margin-bottom: 0;
+                  }
+                }
+                .blue {
+                  color: $btn-primary;
+                }
+                .greylabel {
+                  color: $color-light-blue10;
+                  margin-right: 2px;
+                  font-weight: 400;
+                }
+              }
+              .editicon-notes {
+                font-size: 17px;
+                margin-left: 3px;
+                color: $icon-color;
+                vertical-align: middle;
+              }
+              .meeting-time {
+                font-size: 0.786em;
+              }
+            }
+            .confirm-column {
+              width: 82px;
+              float: right;
+              text-align: center;
+              font-size: 0.857em;
+              .confirm-icon {
+                font-size: 25px;
+                color: $icon-green;
+                display: block;
+                margin-bottom: 9px;
+              }
+              .schedule-icon {
+                font-size: 25px;
+                color: $icon-orange;
+                display: block;
+                margin-bottom: 6px;
+              }
+              .confirm-btn {
+                @include font-montserrat;
+                font-size: 0.714em;
+                display: block;
+                padding: 9px 8px;
+                margin: auto;
+                margin-top: 10px;
+              }
+            }
+          }
+          .drive-time-wrap {
+            background-color: $color-white;
+            width:122px;
+            position: absolute;
+            right: 17px;
+            top: 0;
+            z-index: 3;
+            @include border-radius (5px);
+            &.greybg {
+              background-color: $color-dark-blue15;
+              z-index: 2;
+              .buffer-time {
+                background-color: $color-dark-blue17;
+              }
+              .buffer-icon {
+                font-size: 13px;
+                color: $icon-red;
+                margin-right: 7px;
+              }
+            }
+            .drivetime-section {
+              padding: 14px 0 11px 11px;
+              .drive-label {
+                font-size: 0.786em;
+                color: $color-light-blue10;
+                display: block;
+                font-weight: normal;
+                margin-bottom: 4px;
+              }
+              .drive-hrs {
+                font-size: 1.071em;
+                display: block;
+                margin-bottom: 7px;
+                .edit-hrs {
+                  font-size: 17px;
+                  margin-left: 3px;
+                  color: $icon-color;
+                  vertical-align: middle;
+                }
+              }
+              .leaveby {
+                font-size: 0.786em;
+                display: block;
+              }
+            }
+            .buffer-time {
+              background-color: $color-light-blue25;
+              font-size: 0.786em;
+              padding: 10px 0;
+              display: block;
+              text-align: center;
+              @include border-bottom-left-radius (5px);
+              @include border-bottom-right-radius (5px);
+            }
+          }
+        }
+        .timing-left {
+          width: 120px;
+          text-align: center;
+          float: left;
+          position: relative;
+          color: $color-dark-blue16;
+        }
+      }
+    }
+  }
+  .agenda-endroute-btn {
+    background-color: $color-white;
+    min-height: 81px;
+    padding-top: 19px;
+  }
+}
+#eventModalRoute, #eventModalWarning{
+  .modal-dialog{
+    width: 450px;
+    .heading {
+      text-transform: none;
+    }
+  }
+}
+.modal-dialog{
+  .icon-exl-alert{
+    font-size: 19px;
+    float: left;
+    margin-right: 15px;
+    color: $alert-warning-icon;
+  }
+}

@@ -1,0 +1,213 @@
+<div class="row filter-greybox">
+  <div class="col-sm-12 col-md-12 clearfix">
+    <div class="col-sm-1 col-md-1 filter-title hidden-xs">Filters</div>
+    <div class="col-xs-10 col-sm-5 col-md-5 filter-select-form">
+      <span class="selectbox insure-select-form">
+        <select class="cs-select cs-skin-border">
+          <option>Default Status Filter</option>
+          <option value="">Select 1</option>
+          <option value="">Select 2</option>
+          <option value="">Select 3</option>
+        </select>
+      </span>
+    </div>
+    <div class="col-sm-1 col-md-1 filter-collaps">
+      <a (click)="filterToggle()">
+        <i class="icon-exl-collapsed collaps-icon" [hidden]="filterShow"></i>
+        <i class="icon-exl-expanded collaps-icon" [hidden]="!filterShow"></i>
+      </a>
+    </div>
+  </div>
+  <div class="col-sm-12 col-md-12 filter-mid-blue">
+    <!-- Filter Collapsible View Code -->
+    <div class="filter-descrip" *ngIf="!filterShow">
+      <p class="descrip">The selected filter comprises of the following:</p>
+      <p class="descrip">Status: Scheduled, Assigned, Confirmed, Appointment, Review, Completed, Closed Out, Others</p>
+      <p class="descrip">Tenure: 17 Days to Due Date</p>
+    </div>
+
+  <!-- Filter Expandable View Code -->
+  <div class="filter-expand" *ngIf="filterShow">
+    <div class="clearfix">
+      <h4 class="col-xs-9 col-sm-6 col-md-6 title">EDIT/ CREATE FILTER</h4>
+      <span class="col-xs-3 col-sm-6 col-md-6 clearall"><a href="#">Clear All</a></span>
+    </div>
+    <div class="clearfix">
+      <div class="col-sm-3 col-md-3 status">
+        <div class="status-title">Status</div>
+        <ul class="status-check-list">
+          <li>
+            <label class="check-wrap">
+              <input type="checkbox" name="">
+              <span class="check-label">New</span>
+            </label>
+          </li>
+          <li>
+            <label class="check-wrap">
+              <input type="checkbox" name="">
+              <span class="check-label">Completed</span>
+            </label>
+          </li>
+          <li>
+            <label class="check-wrap">
+              <input type="checkbox" name="">
+              <span class="check-label">Bill Ready</span>
+            </label>
+          </li>
+          <li>
+            <label class="check-wrap">
+              <input type="checkbox" name="">
+              <span class="check-label">Write Up</span>
+            </label>
+          </li>
+          <li>
+            <label class="check-wrap">
+              <input type="checkbox" name="">
+              <span class="check-label">Schedule</span>
+            </label>
+          </li>
+          <li>
+            <label class="check-wrap">
+              <input type="checkbox" name="" checked>
+              <span class="check-label">Confirmed Appointment</span>
+            </label>
+          </li>
+          <li>
+            <label class="check-wrap">
+              <input type="checkbox" name="">
+              <span class="check-label">In Review</span>
+            </label>
+          </li>
+          <li>
+            <label class="check-wrap">
+              <input type="checkbox" name="">
+              <span class="check-label">RFC</span>
+            </label>
+          </li>
+          <li>
+            <label class="check-wrap">
+              <input type="checkbox" name="" checked>
+              <span class="check-label">Call to Schedule</span>
+            </label>
+          </li>
+          <li>
+            <label class="check-wrap">
+              <input type="checkbox" name="" checked>
+              <span class="check-label">Holding</span>
+            </label>
+          </li>
+        </ul>
+      </div>
+      <div class="col-xs-12 col-sm-9 col-md-9 filter-show-work">
+        <div class="showork-title">Show Work Orders Closer to</div>
+        <div class="row clearfix">
+          <div class="col-xs-6 col-sm-6 col-md-6 due-date">Past Due Date</div>
+          <div class="col-xs-6 col-sm-6 col-md-6 due-date textrt">To Due Date</div>
+        </div>
+        <div class="progressbar-wrap">
+          <div class="progressbar">
+            <div class="left-bar">
+              <span class="blue-bar pull-right" style="width: 29%;">
+                <a href="#" class="circle">
+                  <div class="progress-tooltip">-15 Days<i class="arrow-bottom"></i></div>
+                </a>
+              </span>
+            </div>
+            <div class="right-bar">
+              <span class="blue-bar pull-left" style="width: 46%;">
+                <a href="#" class="circle pull-right">
+                  <div class="progress-tooltip">25 Days<i class="arrow-bottom"></i></div>
+                </a>
+              </span>
+            </div>
+          </div>
+          <div class="progress-days clearfix">
+            <span class="days"><i class="devider-line"></i>All</span>
+            <span class="days"><i class="devider-line"></i>-45 Days</span>
+            <span class="days"><i class="devider-line"></i>-30 Days</span>
+            <span class="days"><i class="devider-line"></i>-15 Days</span>
+            <span class="days"><i class="devider-line"></i>0 Days</span>
+            <span class="days"><i class="devider-line"></i>15 Days</span>
+            <span class="days"><i class="devider-line"></i>30 Days</span>
+            <span class="days"><i class="devider-line"></i>45 Days</span>
+            <span class="days"><i class="devider-line"></i>All</span>
+          </div>
+        </div>
+        <h5 class="advance-filter-title">ADVANCE FilterS</h5>
+        <form class="filter-select-checkform">
+          <div class="form-group clearfix">
+            <label class="control-label">Business Unit:</label>
+            <div class="select-form-wrap">
+              <div class="whitebox clearfix">
+                <span class="selected-checked">Commercial<a href="#" class="icon-exl-close closeicon"></a></span>
+                <span class="selected-checked">Financial<a href="#" class="icon-exl-close closeicon"></a></span>
+                <span class="selected-checked">Consumer<a href="#" class="icon-exl-close closeicon"></a></span>
+                <a href="#" class="icon-exl-arrow-down arrow-down"></a>
+              </div>
+            </div>
+          </div>
+          <div class="form-group clearfix">
+            <label class="control-label">Audit Solution:</label>
+            <div class="select-form-wrap">
+              <div class="whitebox clearfix">
+                <span class="selected-checked">OSI Physical Audit<a href="#" class="icon-exl-close closeicon"></a></span>
+                <span class="selected-checked">OSI Phone Audit<a href="#" class="icon-exl-close closeicon"></a></span>
+                <a href="#" class="icon-exl-arrow-down arrow-down"></a>
+              </div>
+            </div>
+          </div>
+          <div class="form-group clearfix">
+            <label class="control-label">Employee:</label>
+            <div class="select-form-wrap">
+              <div class="whitebox clearfix">
+                <span class="selected-checked">Ray Charles<a href="#" class="icon-exl-close closeicon"></a></span>
+                <span class="selected-checked">Maggie Cho<a href="#" class="icon-exl-close closeicon"></a></span>
+                <a href="#" class="icon-exl-arrow-down arrow-down"></a>
+              </div>
+              <div class="filter-checkform-expand">
+                <ul class="checklist">
+                  <li>
+                    <label class="check-wrap">
+                      <input type="checkbox" name="">
+                      <span class="check-label">Select All</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="check-wrap">
+                      <input type="checkbox" name="" checked>
+                      <span class="check-label">Ray Charles</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="check-wrap">
+                      <input type="checkbox" name="" checked>
+                      <span class="check-label">Maggie Cho</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="check-wrap">
+                      <input type="checkbox" name="">
+                      <span class="check-label">Ethan Charles</span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </form>
+        </div>
+
+    </div>
+    <div class="filter-btn-group clearfix">
+      <button type="button" class="btn  btn-border marginrt" disabled>SAVE CHANGES</button>
+      <button type="button" class="btn btn-border">SAVE AS NEW</button>
+      <button type="button" class="btn btn-border pull-right">DELETE FILTER</button>
+    </div>
+  </div>
+  </div>
+<!-- Filter Expandable closed -->
+
+  <div class="col-sm-12 col-md-12 clearfix">
+    <button type="button" class="btn btn-primary apply-filter" [disabled]="!filterShow">Apply Filter</button>
+  </div>
+</div>

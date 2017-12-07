@@ -1,0 +1,445 @@
+<!-- Agenda Page Start -->
+<div class="page-title-blue row">
+  <h3 class="title col-sm-6 col-md-6 hidden-xs">Agenda</h3>
+</div>
+<div class="row clearfix">
+  <div class="col-xs-12 col-sm-4 col-md-4 agendadate">
+    <label class="datelabel">Date</label>
+    <div class="form-date dateselect">
+      <input type="date" class="form-control date bigfont" placeholder="11/07/2017">
+      <a href="" class="icon-exl-calendar2 calendar-icon calendr"></a>
+    </div>
+  </div>
+  <div class="col-xs-12 col-sm-8 col-md-8">
+    <div class="clearfix">
+      <span class="selectbox emailsummery">
+        <i class="icon-exl-messages2 emailicon"></i>
+        <select class="cs-select cs-skin-border">
+          <option>Email Summary</option>
+          <option value="">Select 1</option>
+          <option value="">Select 2</option>
+          <option value="">Select 3</option>
+        </select>
+      </span>
+    </div>
+    <div class="btngroup">
+      <button type="button" class="btn btn-border" disabled>CANCEL APPOINTMENT</button>
+      <button type="button" class="btn btn-border" disabled>RESCHEDULE</button>
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#eventModal">ADD EVENT</button>
+    </div>
+  </div>
+</div>
+<!-- Agenda Time Table Start -->
+<div class="agenda-table-wrap">
+  <div class="agenda-endroute-top clearfix">
+    <div class="col-xs-12 col-sm-6 col-md-6">
+      <label class="start-label">Start Route <br>From:</label>
+        <div class="start-selectform">
+          <span>
+            <select class="cs-select cs-skin-border">
+              <option>Home - 343 Willshire Street, Tampa</option>
+              <option value="">Select 1</option>
+              <option value="">Select 2</option>
+              <option value="">Select 3</option>
+            </select>
+          </span>
+          <label class="check-wrap check-selectall">
+            <input type="checkbox" name="">
+            <span class="check-label">Select All</span>
+          </label>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-6 clearfix">
+      <a href="#" class="btn-pins marginrt"><i class="icon-exl-routes pin-icon" data-toggle="modal" data-target="#eventModalRoute"></i>Routes</a>
+      <a href="#" class="btn-pins"><i class="icon-exl-pins pin-icon"></i>Pins</a>
+      <span class="showmap-label">Show on Maps</span>
+    </div>
+  </div>
+  <!-- Agenda Time Table Middle Start -->
+  <div class="agenda-table-mid">
+      <div class="leftbg"></div>
+    <ul class="timerlist scroll">
+      <li>
+        <div class="timer-15-min visible">
+          <div class="timing-left">9:00 am</div>
+          <div class="drive-time-wrap">
+            <div class="drivetime-section">
+              <label class="drive-label">Drive Time</label>
+              <span class="drive-hrs">10 mins<a href="#"><i class="icon-exl-edit edit-hrs"></i></a></span>
+              <span class="leaveby">Leave by: 9:50 am</span>
+            </div>
+            <span class="buffer-time">Buffer 0 mins</span>
+          </div>
+        </div>
+        <div class="timer-15-min">
+          <div class="timing-left">9:15 am</div>
+        </div>
+        <div class="timer-15-min">
+          <div class="timing-left">9:30 am</div>
+        </div>
+        <div class="timer-15-min">
+          <div class="timing-left">9:45 am</div>
+        </div>
+      </li>
+      <li>
+        <div class="timer-15-min visible">
+          <div class="timing-left active-time">10:00 am</div>
+          <div class="userdtl-whitebx clearfix">
+            <a href="#" class="blueshape-triangle"></a>
+            <div class="check-column">
+              <label class="check-wrap">
+                <input type="checkbox" name="">
+                <span class="check-label check-only"></span>
+              </label>
+            </div>
+            <div class="middle-userdtl-column clearfix">
+              <div class="userdtl-row clearfix">
+                <div class="userdtl-column clearfix">
+                  <span class="icon-exl-location-pointer locationicon"><small>A</small></span>
+                  <div class="woidnum-address">
+                    <span class="woidnumber">12342210</span>
+                    <p class="address">Olaf’s Ice Cream</p>
+                  </div>
+                </div>
+                <div class="userdtl-column">
+                  <label class="labels">Appointment Time</label>
+                  <p class="appoint-time">10:00 am - 11:00 am CST<a href="#"><i class="icon-exl-edit editicon"></i></a></p>
+                  <p class="date-small"><label class="label-grey">Client:</label>9:00 am - 10:00 am EDT (1 hr)</p>
+                </div>
+                <div class="userdtl-column">
+                  <label class="labels windowslot">Window Slot</label>
+                  <p class="date-small"><label class="label-grey">Auditor:</label>08:00 am - 1:00 pm CST</p>
+                  <p class="date-small"><label class="label-grey">Client:</label>7:00 am - 12:00 pm EDT (5 hrs)</p>
+                </div>
+              </div>
+              <div class="userdtl-row clearfix">
+                <div class="userdtl-column clearfix">
+                  <span class="username">John Smith K</span>
+                  <p class="date-small small-font blue"><label class="label-grey">Address:</label>22, St. Armand’s Circle, Tampa, FL</p>
+                  <p class="date-small small-font blue"><label class="label-grey">Phone:</label>(874) 732 7712</p>
+                </div>
+                <div class="userdtl-column">
+                  <p class="date-small small-font margintop"><label class="label-grey">Product Line:</label>OSI Pivot Audit</p>
+                  <p class="date-small small-font"><label class="label-grey">Policy Type:</label>Workers Compensation</p>
+                </div>
+                <div class="userdtl-column">
+                  <label class="labels">Notes</label>
+                  <div class="clearfix">
+                    <p class="note-descrip">Walk through the store for inventory checks and record/ validate with records provided t...</p>
+                    <a href="#" class="edit-note"><i class="icon-exl-edit"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="confirm-column">
+              <i class="icon-exl-confirmed confirm-icon"></i>Confirmed
+            </div>
+          </div>
+        </div>
+        <div class="timer-15-min">
+          <div class="timing-left">10:15 am</div>
+        </div>
+        <div class="timer-15-min">
+          <div class="timing-left">10:30 am</div>
+        </div>
+        <div class="timer-15-min">
+          <div class="timing-left">10:45 am</div>
+        </div>
+      </li>
+      <li>
+        <div class="timer-15-min visible">
+          <div class="timing-left">11:00 am</div>
+          <div class="drive-time-wrap">
+            <div class="drivetime-section">
+              <label class="drive-label">Drive Time</label>
+              <span class="drive-hrs">20 mins<a href="#"><i class="icon-exl-edit edit-hrs"></i></a></span>
+              <span class="leaveby">Leave by: 11:40 pm</span>
+            </div>
+            <span class="buffer-time">Buffer 40 mins</span>
+          </div>
+        </div>
+        <div class="timer-15-min">
+          <div class="timing-left">11:15 am</div>
+        </div>
+        <div class="timer-15-min">
+          <div class="timing-left">11:30 am</div>
+        </div>
+        <div class="timer-15-min">
+          <div class="timing-left">11:45 am</div>
+        </div>
+      </li>
+      <li>
+        <div class="timer-15-min visible">
+          <div class="timing-left active-time">12:00 am</div>
+          <div class="userdtl-whitebx clearfix">
+            <a href="#" class="blueshape-triangle"></a>
+            <div class="check-column">
+              <label class="check-wrap">
+                <input type="checkbox" name="">
+                <span class="check-label check-only"></span>
+              </label>
+            </div>
+            <div class="middle-userdtl-column clearfix">
+              <div class="userdtl-row clearfix">
+                <div class="userdtl-column clearfix">
+                  <span class="icon-exl-location-pointer locationicon"><small>B</small></span>
+                  <div class="woidnum-address">
+                    <span class="woidnumber">12342210</span>
+                    <p class="address">Chrome Extensions</p>
+                  </div>
+                </div>
+                <div class="userdtl-column">
+                  <label class="labels">Appointment Time</label>
+                  <p class="appoint-time">12:00 am - 1:00 pm CST<a href="#"><i class="icon-exl-edit editicon"></i></a></p>
+                  <p class="date-small"><label class="label-grey">Client Time:</label>11:00 pm - 12:00 pm EDT (1 hr)</p>
+                </div>
+                <div class="userdtl-column">
+                  <label class="labels windowslot">Window Slot</label>
+                  <p class="date-small"><label class="label-grey">Auditor:</label>11:00 am - 5:00 pm CST</p>
+                  <p class="date-small"><label class="label-grey">Client:</label>10:00 am - 4:00 pm EDT (6 hrs)</p>
+                </div>
+              </div>
+              <div class="userdtl-row clearfix">
+                <div class="userdtl-column clearfix">
+                  <span class="username">Martin Migoya</span>
+                  <p class="date-small small-font blue"><label class="label-grey">Address:</label>22, St. Armand’s Circle, Tampa, FL</p>
+                  <p class="date-small small-font blue"><label class="label-grey">Phone:</label>(874) 732 7712</p>
+                </div>
+                <div class="userdtl-column">
+                  <p class="date-small small-font margintop"><label class="label-grey">Product Line:</label>OSI Pivot Audit</p>
+                  <p class="date-small small-font"><label class="label-grey">Policy Type:</label>Workers Compensation</p>
+                </div>
+                <div class="userdtl-column">
+                  <label class="labels">Notes</label>
+                  <div class="clearfix">
+                    <p class="note-descrip">Walk through the store for inventory checks and record/ validate with records provided t...</p>
+                    <a href="#" class="edit-note"><i class="icon-exl-edit"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="confirm-column">
+              <i class="icon-exl-scheduled schedule-icon"></i>Scheduled
+              <button type="button" class="btn btn-primary confirm-btn">CONFIRM</button>
+            </div>
+          </div>
+        </div>
+        <div class="timer-15-min">
+          <div class="timing-left">12:15 am</div>
+        </div>
+        <div class="timer-15-min">
+          <div class="timing-left">12:30 am</div>
+        </div>
+        <div class="timer-15-min">
+          <div class="timing-left">12:45 am</div>
+        </div>
+      </li>
+
+
+      <li>
+        <div class="timer-15-min visible">
+          <div class="timing-left">1:00 am</div>
+        </div>
+        <div class="timer-15-min visible">
+          <div class="timing-left active-time">1:15 am</div>
+          <div class="userdtl-whitebx greybg clearfix">
+            <a href="#" class="blueshape-triangle"></a>
+            <div class="check-column">
+              <label class="check-wrap">
+                <input type="checkbox" name="">
+                <span class="check-label check-only"></span>
+              </label>
+            </div>
+            <div class="middle-userdtl-column clearfix">
+              <div class="userdtl-row clearfix">
+                <div class="userdtl-column clearfix">
+                  <span class="icon-exl-location-pointer locationicon"><small>D</small></span>
+                  <div class="woidnum-address">
+                    <span class="woidnumber">12342210</span>
+                    <p class="address">Arbor Brewery</p>
+                  </div>
+                </div>
+                <div class="userdtl-column">
+                  <label class="labels">Appointment Time</label>
+                  <p class="appoint-time">1:45 pm - 2:45 pm CST<a href="#"><i class="icon-exl-edit editicon"></i></a></p>
+                  <p class="date-small"><label class="label-grey">Client:</label>12:45 pm - 1:45 pm EDT (1 hr)</p>
+                </div>
+                <div class="userdtl-column">
+                  <label class="labels windowslot">Window Slot</label>
+                  <p class="date-small"><label class="label-grey">Auditor:</label>12:00 pm - 3:00 pm CST</p>
+                  <p class="date-small"><label class="label-grey">Client:</label>11:00 am - 2:00 pm EDT (3 hrs)</p>
+                </div>
+              </div>
+              <div class="userdtl-row clearfix">
+                <div class="userdtl-column clearfix">
+                  <span class="username">John Smith K</span>
+                  <p class="date-small small-font blue"><label class="label-grey">Address:</label>22, St. Armand’s Circle, Tampa, FL</p>
+                  <p class="date-small small-font blue"><label class="label-grey">Phone:</label>(874) 732 7712</p>
+                </div>
+                <div class="userdtl-column">
+                  <p class="date-small small-font margintop"><label class="label-grey">Product Line:</label>OSI Pivot Audit</p>
+                  <p class="date-small small-font"><label class="label-grey">Policy Type:</label>Workers Compensation</p>
+                </div>
+                <div class="userdtl-column">
+                  <label class="labels">Notes</label>
+                  <div class="clearfix">
+                    <p class="note-descrip">Walk through the store for inventory checks and record/ validate with records provided t...</p>
+                    <a href="#" class="edit-note"><i class="icon-exl-edit"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="confirm-column">
+              <i class="icon-exl-confirmed confirm-icon"></i>Confirmed
+            </div>
+          </div>
+          <div class="drive-time-wrap greybg">
+            <div class="drivetime-section">
+              <label class="drive-label">Drive Time</label>
+              <span class="drive-hrs">5 mins<a href="#"><i class="icon-exl-edit edit-hrs"></i></a></span>
+              <span class="leaveby">Leave by: 1:25 pm</span>
+            </div>
+            <span class="buffer-time">Buffer 25 mins</span>
+          </div>
+        </div>
+        <div class="timer-15-min visible">
+          <div class="timing-left active-time">1:30 am</div>
+          <div class="userdtl-whitebx clearfix">
+            <a href="#" class="blueshape-triangle"></a>
+            <div class="check-column">
+              <label class="check-wrap">
+                <input type="checkbox" name="">
+                <span class="check-label check-only"></span>
+              </label>
+            </div>
+            <div class="userdtl-location-column clearfix">
+              <span class="icon-exl-location-pointer locationmap-icon"></span>
+              <div class="lunch-note-descrip">
+                <p class="descrip">Lunch with Dan - <span class="blue">IHOP, 234 Castro Street, Tampa, Florida</span></p>
+                <p class="descrip"><label class="greylabel">Notes :</label>Call Dan and confirm
+                  <a href="#" class="editicon-notes"><i class="icon-exl-edit"></i></a>
+                </p>
+              </div>
+            </div>
+            <div class="userdtl-location-column clearfix">
+              <p class="meeting-time">Meeting Time: 1:30 pm - 2:00 pm CST (30mins) <a href="#" class="editicon-notes"><i class="icon-exl-edit"></i></a></p>
+            </div>
+          </div>
+          <div class="drive-time-wrap">
+            <div class="drivetime-section">
+              <label class="drive-label">Drive Time</label>
+              <span class="drive-hrs">5 mins<a href="#"><i class="icon-exl-edit edit-hrs"></i></a></span>
+              <span class="leaveby">Leave by: 1:25 pm</span>
+            </div>
+            <span class="buffer-time">Buffer 25 mins</span>
+          </div>
+        </div>
+        <div class="timer-15-min visible">
+          <div class="timing-left active-time">1:45 am</div>
+          <div class="userdtl-whitebx greybg clearfix">
+            <a href="#" class="blueshape-triangle"></a>
+            <div class="check-column">
+              <label class="check-wrap">
+                <input type="checkbox" name="">
+                <span class="check-label check-only"></span>
+              </label>
+            </div>
+            <div class="middle-userdtl-column clearfix">
+              <div class="userdtl-row clearfix">
+                <div class="userdtl-column clearfix">
+                  <span class="icon-exl-location-pointer locationicon"><small>C</small></span>
+                  <div class="woidnum-address">
+                    <span class="woidnumber">12342210</span>
+                    <p class="address">Arbor Brewery</p>
+                  </div>
+                </div>
+                <div class="userdtl-column">
+                  <label class="labels">Appointment Time</label>
+                  <p class="appoint-time">1:45 pm - 2:45 pm CST<a href="#"><i class="icon-exl-edit editicon"></i></a></p>
+                  <p class="date-small"><label class="label-grey">Client:</label>12:45 pm - 1:45 pm EDT (1 hr)</p>
+                </div>
+                <div class="userdtl-column">
+                  <label class="labels windowslot">Window Slot</label>
+                  <p class="date-small"><label class="label-grey">Auditor:</label>12:00 pm - 3:00 pm CST</p>
+                  <p class="date-small"><label class="label-grey">Client:</label>11:00 am - 2:00 pm EDT (3 hrs)</p>
+                </div>
+              </div>
+              <div class="userdtl-row clearfix">
+                <div class="userdtl-column clearfix">
+                  <span class="username">John Smith K</span>
+                  <p class="date-small small-font blue"><label class="label-grey">Address:</label>22, St. Armand’s Circle, Tampa, FL</p>
+                  <p class="date-small small-font blue"><label class="label-grey">Phone:</label>(874) 732 7712</p>
+                </div>
+                <div class="userdtl-column">
+                  <p class="date-small small-font margintop"><label class="label-grey">Product Line:</label>OSI Pivot Audit</p>
+                  <p class="date-small small-font"><label class="label-grey">Policy Type:</label>Workers Compensation</p>
+                </div>
+                <div class="userdtl-column">
+                  <label class="labels">Notes</label>
+                  <div class="clearfix">
+                    <p class="note-descrip">Walk through the store for inventory checks and record/ validate with records provided t...</p>
+                    <a href="#" class="edit-note"><i class="icon-exl-edit"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="confirm-column">
+              <i class="icon-exl-confirmed confirm-icon"></i>Confirmed
+            </div>
+          </div>
+          <div class="drive-time-wrap greybg">
+            <div class="drivetime-section">
+              <label class="drive-label">Drive Time</label>
+              <span class="drive-hrs">0 mins<a href="#"><i class="icon-exl-edit edit-hrs"></i></a></span>
+              <span class="leaveby">Leave by: 1:45 pm</span>
+            </div>
+            <span class="buffer-time"><i class="icon-exl-alert buffer-icon"></i>Buffer -15 mins</span>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="timer-15-min visible">
+          <div class="timing-left">2:00 pm</div>
+        </div>
+        <div class="timer-15-min">
+          <div class="timing-left">2:15 pm</div>
+        </div>
+        <div class="timer-15-min">
+          <div class="timing-left">2:30 pm</div>
+        </div>
+        <div class="timer-15-min">
+          <div class="timing-left">2:45 pm</div>
+        </div>
+      </li>
+      <li>
+        <div class="timer-15-min visible">
+          <div class="timing-left">3:00 pm</div>
+        </div>
+        <div class="timer-15-min">
+          <div class="timing-left">3:15 pm</div>
+        </div>
+        <div class="timer-15-min visible">
+          <div class="timing-left">3:30 pm</div>
+        </div>
+        <div class="timer-15-min">
+          <div class="timing-left">3:45 pm</div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="agenda-endroute-btn clearfix">
+    <div class="col-xs-12 col-sm-6 col-md-6">
+      <label class="start-label endlabel">End Route At:</label>
+        <div class="start-selectform">
+          <span>
+            <select class="cs-select cs-skin-border">
+              <option>Home - 343 Willshire Street, Tampa</option>
+              <option value="">Select 1</option>
+              <option value="">Select 2</option>
+              <option value="">Select 3</option>
+            </select>
+          </span>
+        </div>
+    </div>
+  </div>
+</div>

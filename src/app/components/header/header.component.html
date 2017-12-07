@@ -1,0 +1,48 @@
+<!-- Header Portion Start -->
+<header>
+  <div class="container-fluid margin-left-none">
+    <div class="row clearfix">
+      <div class="logo"><img src="../../../assets/img/exl-logo.png" alt="Logo"></div>
+      <div class="inventory-logo col-sm-2"><img src="../../../assets/img/inventory-management.png"></div>
+      <div class="col-xs-12 col-sm-8 pull-right">
+        <h5 class="title visible-xs ordertitle">ORDERS</h5>
+        <div class="userdtl-dropdown clearfix">
+            <div class="user-dtls clearfix">
+              <span class="fa fa-user-circle-o header-usericon visible-xs" aria-hidden="true"></span>
+              <div class="pull-left hidden-xs">
+                <h6 class="username">Mary Smith</h6>
+                <span class="user-location">Colombian Ins Grp</span>
+              </div>
+              <i class="drop-arrow fa fa-angle-down hidden-xs" aria-hidden="true"></i>
+            </div>
+            <ul class="dropdowns">
+              <li><a href="#">Dropdown 1</a></li>
+              <li><a href="#">Dropdown 2</a></li>
+              <li><a href="#">Logout</a></li>
+            </ul>
+        </div>
+        <div class="notifi-messge-icons">
+          <!-- Search Icon for Mobile View Start -->
+          <!-- <div class="icons-group visible-xs">
+            <a href="#" class="link"><i class="icon-exl-search-document icons search"></i></a>
+          </div> -->
+          <div class="icons-group">
+            <a class="link" (click)="toggle()"><i class="icon-exl-system-flags icons flag"></i></a>
+            <span class="notification-alert">2</span>
+            <div *ngIf="showShow">
+              <app-flag></app-flag>
+            </div>
+          </div>
+          <div class="icons-group">
+            <a class="link" (click)="actionToggle()"><i class="icon-exl-reminders icons"></i></a>
+            <span class="notification-alert">7</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div *ngIf="showAction">
+  <app-action></app-action>
+</div>

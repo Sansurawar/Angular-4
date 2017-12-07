@@ -1,0 +1,42 @@
+<!-- Reminder Message Dropdown Start -->
+<div class="actions-dropdown" >
+  <span class="arrow-up"></span>
+  <div class="action-head clearfix">
+    <h4 class="col-sm-6 col-md-6 title">Actions</h4>
+    <span class="col-sm-6 col-md-6 view-all">
+      <a href="#">View All</a>
+    </span>
+  </div>
+  <div class="actions-middle">
+    <div class="todayspast-grey clearfix">
+      <h5 class="title">Past Due<span class="action-notification">3</span></h5>
+      <a class="downarrow" (click)="actionPastToggle()"><i class="icon-exl-arrow-down"></i></a>
+    </div>
+    <ul class="actions-list" *ngIf="actionPastShow">
+      <li class="clearfix" *ngFor="let actionPast of actionNotifPast" >
+        <div class="col-xs-11 col-sm-11 col-md-11 leftpadd">
+          <p class="woid-number"><a href="#">{{actionPast.voidNumber}}</a></p>
+          <p class="from-self">{{actionPast.from}}</p>
+          <p class="actions-descrip">{{actionPast.description}}</p>
+          <span class="actions-date">{{actionPast.date}}</span>
+        </div>
+        <span class="col-xs-1 col-sm-1 col-md-1 actions-arrow"><i class="icon-exl-tick-circle"></i></span>
+      </li>
+    </ul>
+    <div class="todayspast-grey clearfix">
+      <h5 class="title">Upcoming<span class="dividerline">Today</span><span class="action-notification orange">5</span></h5>
+    </div>
+    <ul class="actions-list action-todays-scroll leftpadd">
+      <li class="clearfix" *ngFor="let actionUpcoming of actionNotifUpcoming">
+        <div class="col-xs-11 col-sm-11 col-md-11 leftpadd">
+          <p class="woid-number"><a href="#">{{actionUpcoming.voidNumber}}</a></p>
+          <p class="from-self">{{actionUpcoming.from}}</p>
+          <p class="actions-descrip">{{actionUpcoming.description}}</p>
+          <span class="actions-date">{{actionUpcoming.date}}</span>
+        </div>
+        <span class="col-xs-1 col-sm-1 col-md-1 actions-arrow"><i class="icon-exl-tick-circle"></i></span>
+      </li>
+    </ul>
+  </div>
+  <div class="mesg-footer clearfix"><a href="new-actions.html"><i class="icon-exl-add iconplus"></i><span class="pull-left">Create New Action</span></a></div>
+</div>
