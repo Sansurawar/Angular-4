@@ -10,6 +10,7 @@ import { ProgressReportComponent } from './pages/progress-report/progress-report
 import { DocumentsComponent } from './pages/documents/documents.component';
 import { AppointmentComponent } from './pages/appointment/appointment.component';
 import { RecordsComponent } from './pages/records/records.component';
+import { ActionListComponent } from './pages/action-list/action-list.component';
 
 const appRoutes: Routes = [
   // { path: '', component:OrderComponent, pathMatch: 'full' },
@@ -22,6 +23,7 @@ const appRoutes: Routes = [
   { path: 'document', component: DocumentsComponent},
   { path: 'appointment', component: AppointmentComponent},
   { path: 'record', component: RecordsComponent},
+  { path: 'actionList', component: ActionListComponent},
   { path: '', redirectTo: '/order',  pathMatch: 'full' },
   { path: '**', component: PagenotFoundComponent }
 ];

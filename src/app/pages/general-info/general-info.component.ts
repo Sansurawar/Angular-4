@@ -12,4 +12,8 @@ export class GeneralInfoComponent implements OnInit {
   ngOnInit() {
   }
 
+  generalInfoForms(value: any){
+    console.log (value);
+  }
+
 }

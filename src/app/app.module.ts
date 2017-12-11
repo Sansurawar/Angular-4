@@ -1,5 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {AccordionModule} from 'primeng/primeng';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {SharedModule} from 'primeng/primeng';
+import {FormsModule} from '@angular/forms';
+import {HttpModule} from '@angular/http';
+
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -23,6 +29,9 @@ import { OrderDetailTabsComponent } from './components/order-detail-tabs/order-d
 import { InsuredComponent } from './components/insured/insured.component';
 import { ActionComponent } from './components/action/action.component';
 import { FlagComponent } from './components/flag/flag.component';
+import { ActionListComponent } from './pages/action-list/action-list.component';
+
+import { DataService } from './services/data.service';
 
 
 @NgModule({
@@ -46,13 +55,19 @@ import { FlagComponent } from './components/flag/flag.component';
     OrderDetailTabsComponent,
     InsuredComponent,
     ActionComponent,
-    FlagComponent
+    FlagComponent,
+    ActionListComponent
   ],
   imports: [
     BrowserModule,
-    routing
+    AccordionModule,
+    BrowserAnimationsModule,
+    SharedModule,
+    FormsModule,
+    routing,
+    HttpModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

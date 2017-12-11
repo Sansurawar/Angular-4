@@ -4,13 +4,14 @@
   <div class="action-head clearfix">
     <h4 class="col-sm-6 col-md-6 title">Actions</h4>
     <span class="col-sm-6 col-md-6 view-all">
-      <a href="#">View All</a>
+      <a routerLink="actionList">View All</a>
     </span>
   </div>
   <div class="actions-middle">
     <div class="todayspast-grey clearfix">
       <h5 class="title">Past Due<span class="action-notification">3</span></h5>
-      <a class="downarrow" (click)="actionPastToggle()"><i class="icon-exl-arrow-down"></i></a>
+      <a class="downarrow" (click)="actionPastToggle()" [hidden]="!actionPastShow"><i class="icon-exl-arrow-down"></i></a>
+      <a class="downarrow" (click)="actionPastToggle()" [hidden]="actionPastShow"><i class="icon-exl-arrow-up"></i></a>
     </div>
     <ul class="actions-list" *ngIf="actionPastShow">
       <li class="clearfix" *ngFor="let actionPast of actionNotifPast" >
@@ -29,7 +30,7 @@
     <ul class="actions-list action-todays-scroll leftpadd">
       <li class="clearfix" *ngFor="let actionUpcoming of actionNotifUpcoming">
         <div class="col-xs-11 col-sm-11 col-md-11 leftpadd">
-          <p class="woid-number"><a href="#">{{actionUpcoming.voidNumber}}</a></p>
+          <p class="woid-number"><a >{{actionUpcoming.voidNumber}}</a></p>
           <p class="from-self">{{actionUpcoming.from}}</p>
           <p class="actions-descrip">{{actionUpcoming.description}}</p>
           <span class="actions-date">{{actionUpcoming.date}}</span>

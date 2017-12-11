@@ -12,365 +12,566 @@
     </span>
   </div>
 
-  <!-- Work Order and Policy Inofr Form Start -->
-  <div class="collapse-form">
-    <div class="title-bar clearfix">
-      <div class="title column-50">1. WORK ORDER INFORMATION</div>
-      <div class="title column-50">2. POLICY INFORMATION</div>
-      <!-- <a href="#" class="icon-exl-collapsed icon-collapsed"></a> -->
-      <a href="#" class="icon-exl-expanded icon-collapsed"></a>
-    </div>
-    <!-- Order WOID Details Form Expand and Collapse Section -->
-    <div class="collapse-expand-container clearfix">
-      <div class="column-50 border-devided">
-        <div class="inline-form woid-form">
-          <div class="form-group margin-none clearfix">
-            <label>Work Order Type </label>
-            <div class="input-div">
-              <input type="text" class="form-control" placeholder="Annual" disabled>
+  <form #infoTabForm="ngForm" (ngSubmit)="generalInfoForms(infoTabForm.value)">
+    <p-accordion [multiple]="true">
+    <div class="collapse-form">
+      <!-- Accordion Tab Section -->
+      <p-accordionTab [selected]="true">
+        <p-header>
+          <div class="collapse-form1">
+            <div class="title-bar clearfix">
+              <div class="title column-50">1. WORK ORDER INFORMATION</div>
+              <div class="title column-50">2. POLICY INFORMATION</div>
             </div>
           </div>
-          <div class="form-group clearfix">
-            <label>Service Level </label>
-            <div class="input-div">
-              <input type="text" class="form-control" placeholder="Normal">
-            </div>
-          </div>
-          <div class="form-group clearfix">
-            <label>Product Line</label>
-            <div class="input-div">
-              <input type="text" class="form-control" placeholder="OSI Physical Audit">
-            </div>
-          </div>
-          <div class="form-group clearfix">
-            <label>Business Unit</label>
-            <div class="input-div">
-              <input type="text" class="form-control" placeholder="Smith Underwriting">
-            </div>
-          </div>
-          <div class="form-group clearfix">
-            <label>BizUnit #</label>
-            <div class="input-div">
-              <input type="text" class="form-control" placeholder="1099978">
-            </div>
-          </div>
-          <div class="form-group clearfix">
-            <label>Received Date</label>
-            <div class="input-div">
-              <div class="calendar-input">
-                <input class="form-control date" name="" placeholder="MM/DD/YYYY" type="date" disabled/>
-                <a href=""class="icon-exl-calendar2 calendar-icon disabled"></a>
+        </p-header>
+        <!-- Order WOID Details Form Expand and Collapse Section -->
+        <div class="collapse-expand-container clearfix">
+          <div class="column-50 border-devided">
+            <div class="inline-form woid-form">
+              <div class="form-group margin-none clearfix">
+                <label>Work Order Type </label>
+                <div class="input-div">
+                  <input type="text" name="workOrderType" #workOrderType="ngModel" class="form-control" minlength="4" placeholder="Annual" required ngModel>
+                  <div *ngIf="workOrderType.errors && (workOrderType.dirty || workOrderType.touched)" class="alert">
+                    <div [hidden]="!workOrderType.errors.required">Required field</div>
+                    <div [hidden]="!workOrderType.errors.minlength">Please enter atlease 4 character</div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group clearfix">
+                <label>Service Level </label>
+                <div class="input-div">
+                  <input type="text" name="serviceLevel" #serviceLevel="ngModel" minlength="4" class="form-control" placeholder="Normal" required ngModel>
+                  <div *ngIf="serviceLevel.errors && (serviceLevel.dirty || serviceLevel.touched)" class="alert">
+                    <div [hidden]="!serviceLevel.errors.required">Required field</div>
+                    <div [hidden]="!serviceLevel.errors.minlength">Please enter atlease 4 character</div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group clearfix">
+                <label>Product Line</label>
+                <div class="input-div">
+                  <input type="text" name="productLine" #productLine="ngModel" minlength="4" class="form-control" placeholder="OSI Physical Audit" required ngModel>
+                  <div *ngIf="productLine.errors && (productLine.dirty || productLine.touched)" class="alert">
+                    <div [hidden]="!productLine.errors.required">Required field</div>
+                    <div [hidden]="!productLine.errors.minlength">Please enter atlease 4 character</div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group clearfix">
+                <label>Business Unit</label>
+                <div class="input-div">
+                  <input type="text" name="businessUnit" #businessUnit="ngModel" minlength="4" class="form-control" placeholder="Smith Underwriting" required ngModel>
+                  <div *ngIf="businessUnit.errors && (businessUnit.dirty || businessUnit.touched)" class="alert">
+                    <div [hidden]="!businessUnit.errors.required">Required field</div>
+                    <div [hidden]="!businessUnit.errors.minlength">Please enter atlease 4 character</div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group clearfix">
+                <label>BizUnit #</label>
+                <div class="input-div">
+                  <input type="text" name="bizUnit" #bizUnit="ngModel" minlength="4" class="form-control" placeholder="1099978" required ngModel>
+                  <div *ngIf="bizUnit.errors && (bizUnit.dirty || bizUnit.touched)" class="alert">
+                    <div [hidden]="!bizUnit.errors.required">Required field</div>
+                    <div [hidden]="!bizUnit.errors.minlength">Please enter atlease 4 character</div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group clearfix">
+                <label>Received Date</label>
+                <div class="input-div">
+                  <div class="calendar-input">
+                    <input class="form-control date" name="receivedDate" #receivedDate="ngModel" placeholder="MM/DD/YYYY" type="date" required ngModel/>
+                    <a href=""class="icon-exl-calendar2 calendar-icon"></a>
+                    <div *ngIf="receivedDate.errors && (receivedDate.dirty || receivedDate.touched)" class="alert">
+                      <div [hidden]="!receivedDate.errors.required">Please select date</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group clearfix">
+                <label>Due Date</label>
+                <div class="input-div">
+                  <div class="calendar-input">
+                    <input class="form-control date" name="dueDate" #dueDate="ngModel" placeholder="MM/DD/YYYY" type="date" required ngModel/>
+                    <a href=""class="icon-exl-calendar2 calendar-icon"></a>
+                    <div *ngIf="dueDate.errors && (dueDate.dirty || dueDate.touched)" class="alert">
+                      <div [hidden]="!dueDate.errors.required">Please select date</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group clearfix">
+                <label>Last Program Report</label>
+                <div class="input-div">
+                  <div class="calendar-input">
+                    <input class="form-control date" name="lastProgramReport" #lastProgramReport="ngModel" placeholder="MM/DD/YYYY" type="date" required ngModel/>
+                    <a href=""class="icon-exl-calendar2 calendar-icon"></a>
+                    <div *ngIf="lastProgramReport.errors && (lastProgramReport.dirty || lastProgramReport.touched)" class="alert">
+                      <div [hidden]="!lastProgramReport.errors.required">Please select date</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group clearfix">
+                <label>Auto Completion date</label>
+                <div class="input-div">
+                  <div class="calendar-input">
+                    <input class="form-control date" name="autoCompletionDate" #autoCompletionDate="ngModel" placeholder="MM/DD/YYYY" type="date" required ngModel/>
+                    <a href=""class="icon-exl-calendar2 calendar-icon"></a>
+                    <div *ngIf="autoCompletionDate.errors && (autoCompletionDate.dirty || autoCompletionDate.touched)" class="alert">
+                      <div [hidden]="!autoCompletionDate.errors.required">Please select date</div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <div class="form-group clearfix">
-            <label>Due Date</label>
-            <div class="input-div">
-              <div class="calendar-input">
-                <input class="form-control date" name="" placeholder="MM/DD/YYYY" type="date" disabled/>
-                <a href=""class="icon-exl-calendar2 calendar-icon disabled"></a>
+          <div class="column-50 border-devided">
+            <div class="inline-form woid-form">
+              <div class="form-group margin-none clearfix">
+                <label>Policy Number</label>
+                <div class="input-div">
+                  <input type="text" name="policyNumber" #policyNumber="ngModel" minlength="4" class="form-control" placeholder="999888777654" required ngModel>
+                  <div *ngIf="policyNumber.errors && (policyNumber.dirty || policyNumber.touched)" class="alert">
+                    <div [hidden]="!policyNumber.errors.required">Required field</div>
+                    <div [hidden]="!policyNumber.errors.minlength">Please enter atlease 4 character</div>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="form-group clearfix">
-            <label>Last Program Report</label>
-            <div class="input-div">
-              <div class="calendar-input">
-                <input class="form-control date" name="" placeholder="MM/DD/YYYY" type="date" disabled/>
-                <a href=""class="icon-exl-calendar2 calendar-icon disabled"></a>
+              <div class="form-group clearfix">
+                <label>Policy Period</label>
+                <div class="input-div clearfix">
+                  <span class="calendar-input pull-left">
+                    <input class="form-control date" name="policyPeriodFrom" #policyPeriodFrom="ngModel" placeholder="MM/DD/YYYY" type="date" required ngModel/>
+                    <a href=""class="icon-exl-calendar2 calendar-icon"></a>
+                    <div *ngIf="policyPeriodFrom.errors && (policyPeriodFrom.dirty || policyPeriodFrom.touched)" class="alert">
+                      <div [hidden]="!policyPeriodFrom.errors.required">Please select date</div>
+                    </div>
+                  </span>
+                  <span class="period-to">to </span>
+                  <span class="calendar-input pull-left">
+                    <input class="form-control date" name="policyPeriodTo" #policyPeriodTo="ngModel" placeholder="MM/DD/YYYY" type="date" required ngModel/>
+                    <a href=""class="icon-exl-calendar2 calendar-icon disabled"></a>
+                    <div *ngIf="policyPeriodTo.errors && (policyPeriodTo.dirty || policyPeriodTo.touched)" class="alert">
+                      <div [hidden]="!policyPeriodTo.errors.required">Please select date</div>
+                    </div>
+                  </span>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="form-group clearfix">
-            <label>Auto Completion date</label>
-            <div class="input-div">
-              <div class="calendar-input">
-                <input class="form-control date" name="" placeholder="MM/DD/YYYY" type="date"/>
-                <a href=""class="icon-exl-calendar2 calendar-icon"></a>
+              <div class="form-group clearfix">
+                <label>Audit Period</label>
+                <div class="input-div clearfix">
+                  <span class="calendar-input pull-left">
+                    <input class="form-control date" name="auditPeriodFrom" #auditPeriodFrom="ngModel" placeholder="MM/DD/YYYY" type="date" required ngModel/>
+                    <a href=""class="icon-exl-calendar2 calendar-icon"></a>
+                    <div *ngIf="auditPeriodFrom.errors && (auditPeriodFrom.dirty || auditPeriodFrom.touched)" class="alert">
+                      <div [hidden]="!auditPeriodFrom.errors.required">Please select date</div>
+                    </div>
+                  </span>
+                  <span class="period-to">to </span>
+                  <span class="calendar-input pull-left">
+                    <input class="form-control date" name="auditPeriodTo" #auditPeriodTo="ngModel" placeholder="MM/DD/YYYY" type="date" required ngModel/>
+                    <a href=""class="icon-exl-calendar2 calendar-icon"></a>
+                    <div *ngIf="auditPeriodTo.errors && (auditPeriodTo.dirty || auditPeriodTo.touched)" class="alert">
+                      <div [hidden]="!auditPeriodTo.errors.required">Please select date</div>
+                    </div>
+                  </span>
+                </div>
+              </div>
+              <div class="form-group clearfix">
+                <label>Policy Type</label>
+                <div class="input-div">
+                  <input type="text" name="policyType" #policyType="ngModel" minlength="4" class="form-control" placeholder="Workers Compensation" required ngModel>
+                  <div *ngIf="policyType.errors && (policyType.dirty || policyType.touched)" class="alert">
+                    <div [hidden]="!policyType.errors.required">Required field</div>
+                    <div [hidden]="!policyType.errors.minlength">Please enter atlease 4 character</div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group clearfix">
+                <label>Carrier</label>
+                <div class="input-div">
+                  <input type="text" name="carrier" #carrier="ngModel" minlength="4"  class="form-control" placeholder="Acme Insurance Ltd" required ngModel>
+                  <div *ngIf="carrier.errors && (carrier.dirty || carrier.touched)" class="alert">
+                    <div [hidden]="!carrier.errors.required">Required field</div>
+                    <div [hidden]="!carrier.errors.minlength">Please enter atlease 4 character</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="column-50 border-devided">
-        <div class="inline-form woid-form">
-          <div class="form-group margin-none clearfix">
-            <label>Policy Number</label>
-            <div class="input-div">
-              <input type="text" class="form-control" placeholder="999888777654">
-            </div>
-          </div>
-          <div class="form-group clearfix">
-            <label>Policy Period</label>
-            <div class="input-div clearfix">
-              <span class="calendar-input pull-left">
-                <input class="form-control date" name="" placeholder="MM/DD/YYYY" type="date" disabled/>
-                <a href=""class="icon-exl-calendar2 calendar-icon disabled"></a>
-              </span>
-              <span class="period-to">to </span>
-              <span class="calendar-input pull-left">
-                <input class="form-control date" name="" placeholder="MM/DD/YYYY" type="date" disabled/>
-                <a href=""class="icon-exl-calendar2 calendar-icon disabled"></a>
-              </span>
-            </div>
-          </div>
-          <div class="form-group clearfix">
-            <label>Audit Period</label>
-            <div class="input-div clearfix">
-              <span class="calendar-input pull-left">
-                <input class="form-control date" name="" placeholder="MM/DD/YYYY" type="date"/>
-                <a href=""class="icon-exl-calendar2 calendar-icon"></a>
-              </span>
-              <span class="period-to">to </span>
-              <span class="calendar-input pull-left">
-                <input class="form-control date" name="" placeholder="MM/DD/YYYY" type="date"/>
-                <a href=""class="icon-exl-calendar2 calendar-icon"></a>
-              </span>
-            </div>
-          </div>
-          <div class="form-group clearfix">
-            <label>Policy Type</label>
-            <div class="input-div">
-              <input type="text" class="form-control" placeholder="Workers Compensation">
-            </div>
-          </div>
-          <div class="form-group clearfix">
-            <label>Carrier</label>
-            <div class="input-div">
-              <input type="text" class="form-control" placeholder="Acme Insurance Ltd">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+      </p-accordionTab>
 
-  <!-- Work Order and Policy Inofr Form Start -->
-  <div class="collapse-form">
-    <div class="title-bar clearfix">
-      <div class="title column-33">3. INSURED</div>
-      <div class="title column-33">4. Record location information</div>
-      <div class="title column-33">5. Agent information</div>
-      <!-- <a href="#" class="icon-exl-collapsed icon-collapsed"></a> -->
-      <a href="#" class="icon-exl-expanded icon-collapsed"></a>
+      <!-- Accordion Tabs Section -->
+      <p-accordionTab [selected]="true">
+          <p-header>
+            <div class="title-bar clearfix margintop30">
+              <div class="title column-33">3. INSURED</div>
+              <div class="title column-33">4. Record location information</div>
+              <div class="title column-33">5. Agent information</div>
+            </div>
+          </p-header>
+          <!-- Order WOID Details Form Expand and Collapse Section -->
+          <div class="collapse-expand-container clearfix">
+            <div class="title column-33 border-devided">
+              <h4 class="title-tablet-mobile visible-xs visible-sm">3. INSURED</h4>
+              <div class="inline-form woid-form">
+                <div class="form-group margin-none clearfix">
+                  <label class="label-big">Insured Name</label>
+                  <div class="input-div small-div">
+                    <input type="text" name="insuredName" #insuredName="ngModel" minlength="4" class="form-control" placeholder="Scenic Motors Inc" required ngModel>
+                    <div *ngIf="insuredName.errors && (insuredName.dirty || insuredName.touched)" class="alert">
+                      <div [hidden]="!insuredName.errors.required">Required field</div>
+                      <div [hidden]="!insuredName.errors.minlength">Please enter atlease 4 character</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group clearfix">
+                  <label class="label-big">Other Name</label>
+                  <div class="input-div small-div">
+                    <input type="text" name="insuredOtherName" #insuredOtherName="ngModel" minlength="4" class="form-control" placeholder="" required ngModel>
+                    <div *ngIf="insuredOtherName.errors && (insuredOtherName.dirty || insuredOtherName.touched)" class="alert">
+                      <div [hidden]="!insuredOtherName.errors.required">Required field</div>
+                      <div [hidden]="!insuredOtherName.errors.minlength">Please enter atlease 4 character</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group clearfix">
+                  <label class="label-big">Insured Address</label>
+                  <div class="input-div small-div">
+                    <textarea class="textarea" name="insuredAddress" #insuredAddress="ngModel" required ngModel>1992 Rockford Street</textarea>
+                    <div *ngIf="insuredAddress.errors && (insuredAddress.dirty || insuredAddress.touched)" class="alert">
+                      <div [hidden]="!insuredAddress.errors.required">Required field</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group clearfix">
+                  <label class="label-big">City</label>
+                  <div class="input-div small-div">
+                    <input type="text" name="insuredCity" #insuredCity="ngModel" minlength="4" class="form-control" placeholder="" value="Mount Airy" required ngModel>
+                    <div *ngIf="insuredCity.errors && (insuredCity.dirty || insuredCity.touched)" class="alert">
+                      <div [hidden]="!insuredCity.errors.required">Required field</div>
+                      <div [hidden]="!insuredCity.errors.minlength">Please enter atlease 4 character</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group clearfix">
+                  <label class="label-big">State</label>
+                  <div class="input-div small-div">
+                    <input type="text" name="insuredState" #insuredState="ngModel" minlength="4" class="form-control" placeholder="" value="NC" required ngModel>
+                    <div *ngIf="insuredState.errors && (insuredState.dirty || insuredState.touched)" class="alert">
+                      <div [hidden]="!insuredState.errors.required">Required field</div>
+                      <div [hidden]="!insuredState.errors.minlength">Please enter atlease 4 character</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group clearfix">
+                  <label class="label-big">ZIP Code</label>
+                  <div class="input-div small-div">
+                    <input type="text" name="insuredZipCode" #insuredZipCode="ngModel" pattern="^[1-9][0-9]{5}$"  class="form-control" placeholder="" value="27030" required ngModel>
+                    <div *ngIf="insuredZipCode.errors && (insuredZipCode.dirty || insuredZipCode.touched)" class="alert">
+                      <div [hidden]="!insuredZipCode.errors.required">Required field</div>
+                      <div [hidden]="!insuredZipCode.errors.pattern">Please enter 6 digit</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group clearfix">
+                  <label class="label-big">Contact Name</label>
+                  <div class="input-div small-div">
+                    <input type="text" name="insuredContactNameFirst" #insuredContactNameFirst="ngModel" minlength="4" class="form-control " placeholder="" value="John" required ngModel>
+                    <div *ngIf="insuredContactNameFirst.errors && (insuredContactNameFirst.dirty || insuredContactNameFirst.touched)" class="alert">
+                      <div [hidden]="!insuredContactNameFirst.errors.required">Required field</div>
+                      <div [hidden]="!insuredContactNameFirst.errors.minlength">Please enter atlease 4 character</div>
+                    </div>
+                    <input type="text" name="insuredContactNameLast" #insuredContactNameLast="ngModel" minlength="4" class="form-control margintop10" placeholder="" value="Smith" required ngModel>
+                    <div *ngIf="insuredContactNameLast.errors && (insuredContactNameLast.dirty || insuredContactNameLast.touched)" class="alert">
+                      <div [hidden]="!insuredContactNameLast.errors.required">Required field</div>
+                      <div [hidden]="!insuredContactNameLast.errors.minlength">Please enter atlease 4 character</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group clearfix">
+                  <label class="label-big">Main Phone</label>
+                  <div class="input-div small-div">
+                    <input type="text" name="insuredMainPhone" #insuredMainPhone="ngModel" minlength="4" class="form-control" placeholder="" value="813-555-555" required ngModel>
+                    <div *ngIf="insuredMainPhone.errors && (insuredMainPhone.dirty || insuredMainPhone.touched)" class="alert">
+                      <div [hidden]="!insuredMainPhone.errors.required">Required field</div>
+                      <div [hidden]="!insuredMainPhone.errors.minlength">Please enter atlease 4 character</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group clearfix">
+                  <label class="label-big">Fax</label>
+                  <div class="input-div small-div">
+                    <input type="text" name="insuredFax" #insuredFax="ngModel" minlength="4" class="form-control" placeholder="" value="813-555-555" required ngModel>
+                    <div *ngIf="insuredFax.errors && (insuredFax.dirty || insuredFax.touched)" class="alert">
+                      <div [hidden]="!insuredFax.errors.required">Required field</div>
+                      <div [hidden]="!insuredFax.errors.minlength">Please enter atlease 4 character</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group clearfix">
+                  <label class="label-big">Cell Phone</label>
+                  <div class="input-div small-div">
+                    <input type="number" name="insuredCellPhone" #insuredCellPhone="ngModel" minlength="4" class="form-control" placeholder="" value="813-555-555" required ngModel>
+                    <div *ngIf="insuredCellPhone.errors && (insuredCellPhone.dirty || insuredCellPhone.touched)" class="alert">
+                      <div [hidden]="!insuredCellPhone.errors.required">Required field</div>
+                      <div [hidden]="!insuredCellPhone.errors.minlength">Please enter atlease 4 character</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group clearfix">
+                  <label class="label-big">Email</label>
+                  <div class="input-div small-div">
+                    <input type="text" name="insuredCellEmail" #insuredCellEmail="ngModel" pattern = "^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" class="form-control" placeholder="" value="test@xyz.com" required ngModel>
+                    <div *ngIf="insuredCellEmail.errors && (insuredCellEmail.dirty || insuredCellEmail.touched)" class="alert">
+                      <div [hidden]="!insuredCellEmail.errors.required">Required field</div>
+                      <div [hidden]="!insuredCellEmail.errors.pattern">Please enter valid email id</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="title column-33 border-devided">
+              <h4 class="title-tablet-mobile visible-xs visible-sm">4. RECORD LOCATION INFORMATION</h4>
+              <div class="inline-form woid-form">
+                <div class="form-group margin-none clearfix">
+                  <label class="label-big">Name</label>
+                  <div class="input-div small-div">
+                    <input type="text" name="recordName" #recordName="ngModel" minlength="4" class="form-control" placeholder="Scenic Motors Inc" required ngModel>
+                    <div *ngIf="recordName.errors && (recordName.dirty || recordName.touched)" class="alert">
+                      <div [hidden]="!recordName.errors.required">Required field</div>
+                      <div [hidden]="!recordName.errors.minlength">Please enter atlease 4 character</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group clearfix">
+                  <label class="label-big">Other Name</label>
+                  <div class="input-div small-div">
+                    <input type="text" name="recordOtherName" #recordOtherName="ngModel" minlength="4" class="form-control" placeholder="" required ngModel>
+                    <div *ngIf="recordOtherName.errors && (recordOtherName.dirty || recordOtherName.touched)" class="alert">
+                      <div [hidden]="!recordOtherName.errors.required">Required field</div>
+                      <div [hidden]="!recordOtherName.errors.minlength">Please enter atlease 4 character</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group clearfix">
+                  <label class="label-big">Record Address</label>
+                  <div class="input-div small-div">
+                    <textarea class="textarea" name="recordAddress" #recordAddress="ngModel" required ngModel>1992 Rockford Street</textarea>
+                    <div *ngIf="recordAddress.errors && (recordAddress.dirty || recordAddress.touched)" class="alert">
+                      <div [hidden]="!recordAddress.errors.required">Required field</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group clearfix">
+                  <label class="label-big">City</label>
+                  <div class="input-div small-div">
+                    <input type="text" name="recordCity" #recordCity="ngModel" minlength="4" class="form-control" placeholder="" value="Mount Airy" required ngModel>
+                    <div *ngIf="recordCity.errors && (recordCity.dirty || recordCity.touched)" class="alert">
+                      <div [hidden]="!recordCity.errors.required">Required field</div>
+                      <div [hidden]="!recordCity.errors.minlength">Please enter atlease 4 character</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group clearfix">
+                  <label class="label-big">State</label>
+                  <div class="input-div small-div">
+                    <input type="text" name="recordState" #recordState="ngModel" minlength="4" class="form-control" placeholder="" value="NC" required ngModel>
+                    <div *ngIf="recordState.errors && (recordState.dirty || recordState.touched)" class="alert">
+                      <div [hidden]="!recordState.errors.required">Required field</div>
+                      <div [hidden]="!recordState.errors.minlength">Please enter atlease 4 character</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group clearfix">
+                  <label class="label-big">ZIP Code</label>
+                  <div class="input-div small-div">
+                    <input type="text" name="recordZipCode" #recordZipCode="ngModel" pattern="^[1-9][0-9]{5}$" class="form-control" placeholder="" value="27030" required ngModel>
+                    <div *ngIf="recordZipCode.errors && (recordZipCode.dirty || recordZipCode.touched)" class="alert">
+                      <div [hidden]="!recordZipCode.errors.required">Required field</div>
+                      <div [hidden]="!recordZipCode.errors.pattern">Please enter 6 digit</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group clearfix">
+                  <label class="label-big">Contact Name</label>
+                  <div class="input-div small-div">
+                    <input type="text" name="recordContactNameFirst" #recordContactNameFirst="ngModel" minlength="4" class="form-control" placeholder="" value="John" required ngModel>
+                    <div *ngIf="recordContactNameFirst.errors && (recordContactNameFirst.dirty || recordContactNameFirst.touched)" class="alert">
+                      <div [hidden]="!recordContactNameFirst.errors.required">Required field</div>
+                      <div [hidden]="!recordContactNameFirst.errors.minlength">Please enter atlease 4 character</div>
+                    </div>
+                    <input type="text" name="recordContactNameLast" #recordContactNameLast="ngModel" minlength="4" class="form-control margintop10" placeholder="" value="Smith" required ngModel>
+                    <div *ngIf="recordContactNameLast.errors && (recordContactNameLast.dirty || recordContactNameLast.touched)" class="alert">
+                      <div [hidden]="!recordContactNameLast.errors.required">Required field</div>
+                      <div [hidden]="!recordContactNameLast.errors.minlength">Please enter atlease 4 character</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group clearfix">
+                  <label class="label-big">Main Phone</label>
+                  <div class="input-div small-div">
+                    <input type="text" name="recordMainPhone" #recordMainPhone="ngModel" minlength="4" class="form-control" placeholder="" value="813-555-555" required ngModel>
+                    <div *ngIf="recordMainPhone.errors && (recordMainPhone.dirty || recordMainPhone.touched)" class="alert">
+                      <div [hidden]="!recordMainPhone.errors.required">Required field</div>
+                      <div [hidden]="!recordMainPhone.errors.minlength">Please enter atlease 4 character</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group clearfix">
+                  <label class="label-big">Fax</label>
+                  <div class="input-div small-div">
+                    <input type="text" name="recordFax" #recordFax="ngModel" minlength="4" class="form-control" placeholder="" value="813-555-555" required ngModel>
+                    <div *ngIf="recordFax.errors && (recordFax.dirty || recordFax.touched)" class="alert">
+                      <div [hidden]="!recordFax.errors.required">Required field</div>
+                      <div [hidden]="!recordFax.errors.minlength">Please enter atlease 4 character</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group clearfix">
+                  <label class="label-big">Cell Phone</label>
+                  <div class="input-div small-div">
+                    <input type="number" name="recordCellPhone" #recordCellPhone="ngModel" minlength="4" class="form-control" placeholder="" value="813-555-555" required ngModel>
+                    <div *ngIf="recordCellPhone.errors && (recordCellPhone.dirty || recordCellPhone.touched)" class="alert">
+                      <div [hidden]="!recordCellPhone.errors.required">Required field</div>
+                      <div [hidden]="!recordCellPhone.errors.minlength">Please enter atlease 4 character</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group clearfix">
+                  <label class="label-big">Email</label>
+                  <div class="input-div small-div">
+                    <input type="text" name="recordEmail" #recordEmail="ngModel" pattern = "^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" class="form-control" placeholder="" value="test@xyz.com" required ngModel>
+                    <div *ngIf="recordEmail.errors && (recordEmail.dirty || recordEmail.touched)" class="alert">
+                      <div [hidden]="!recordEmail.errors.required">Required field</div>
+                      <div [hidden]="!recordEmail.errors.pattern">Please enter valid email id</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="title column-33 border-devided">
+              <h4 class="title-tablet-mobile visible-xs visible-sm">5. Agent Information</h4>
+              <div class="inline-form woid-form">
+                <div class="form-group margin-none clearfix">
+                  <label class="label-big">Agent Name 1</label>
+                  <div class="input-div small-div">
+                    <input type="text" name="agentName" #agentName="ngModel" minlength="4" class="form-control" placeholder="" value="Smith Bros" required ngModel>
+                    <div *ngIf="agentName.errors && (agentName.dirty || agentName.touched)" class="alert">
+                      <div [hidden]="!agentName.errors.required">Required field</div>
+                      <div [hidden]="!agentName.errors.minlength">Please enter atlease 4 character</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group clearfix">
+                  <label class="label-big">Agent Name 2</label>
+                  <div class="input-div small-div">
+                    <input type="text" name="agentNameTwo" #agentNameTwo="ngModel" minlength="4" class="form-control" placeholder="" required ngModel>
+                    <div *ngIf="agentNameTwo.errors && (agentNameTwo.dirty || agentNameTwo.touched)" class="alert">
+                      <div [hidden]="!agentNameTwo.errors.required">Required field</div>
+                      <div [hidden]="!agentNameTwo.errors.minlength">Please enter atlease 4 character</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group clearfix">
+                  <label class="label-big">Agent Address</label>
+                  <div class="input-div small-div">
+                    <textarea class="textarea" name="agentAddress" #agentAddress="ngModel" required ngModel>PO BOX 1234</textarea>
+                    <div *ngIf="agentAddress.errors && (agentAddress.dirty || agentAddress.touched)" class="alert">
+                      <div [hidden]="!agentAddress.errors.required">Required field</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group clearfix">
+                  <label class="label-big">City</label>
+                  <div class="input-div small-div">
+                    <input type="text" name="agentCity" #agentCity="ngModel" minlength="4" class="form-control" placeholder="" value="Tampa" required ngModel>
+                    <div *ngIf="agentCity.errors && (agentCity.dirty || agentCity.touched)" class="alert">
+                      <div [hidden]="!agentCity.errors.required">Required field</div>
+                      <div [hidden]="!agentCity.errors.minlength">Please enter atlease 4 character</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group clearfix">
+                  <label class="label-big">State</label>
+                  <div class="input-div small-div">
+                    <input type="text" name="agentState" #agentState="ngModel" minlength="4" class="form-control" placeholder="" value="FL" required ngModel>
+                    <div *ngIf="agentState.errors && (agentState.dirty || agentState.touched)" class="alert">
+                      <div [hidden]="!agentState.errors.required">Required field</div>
+                      <div [hidden]="!agentState.errors.minlength">Please enter atlease 4 character</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group clearfix">
+                  <label class="label-big">ZIP Code</label>
+                  <div class="input-div small-div">
+                    <input type="text" name="agentZipCode" #agentZipCode="ngModel" pattern="^[1-9][0-9]{5}$" class="form-control" placeholder="" required ngModel>
+                    <div *ngIf="agentZipCode.errors && (agentZipCode.dirty || agentZipCode.touched)" class="alert">
+                      <div [hidden]="!agentZipCode.errors.required">Required field</div>
+                      <div [hidden]="!agentZipCode.errors.pattern">Please enter 6 digit</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group clearfix">
+                  <label class="label-big">Contact Name</label>
+                  <div class="input-div small-div">
+                    <input type="text" name="agentContactName" #agentContactName="ngModel" minlength="4" class="form-control" placeholder="" value="John" required ngModel>
+                    <div *ngIf="agentContactName.errors && (agentContactName.dirty || agentContactName.touched)" class="alert">
+                      <div [hidden]="!agentContactName.errors.required">Required field</div>
+                      <div [hidden]="!agentContactName.errors.minlength">Please enter atlease 4 character</div>
+                    </div>
+                    <input type="text" name="agentContactNameLast" #agentContactNameLast="ngModel" minlength="4" class="form-control margintop10" placeholder="Smith" required ngModel>
+                    <div *ngIf="agentContactNameLast.errors && (agentContactNameLast.dirty || agentContactNameLast.touched)" class="alert">
+                      <div [hidden]="!agentContactNameLast.errors.required">Required field</div>
+                      <div [hidden]="!agentContactNameLast.errors.minlength">Please enter atlease 4 character</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group clearfix">
+                  <label class="label-big">Agent Phone</label>
+                  <div class="input-div small-div">
+                    <input type="text" name="agentPhone" #agentPhone="ngModel" minlength="4" class="form-control" placeholder="" value="813-555-555" required ngModel>
+                    <div *ngIf="agentPhone.errors && (agentPhone.dirty || agentPhone.touched)" class="alert">
+                      <div [hidden]="!agentPhone.errors.required">Required field</div>
+                      <div [hidden]="!agentPhone.errors.minlength">Please enter atlease 4 character</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group clearfix">
+                  <label class="label-big">Fax</label>
+                  <div class="input-div small-div">
+                    <input type="text" name="agentFax" #agentFax="ngModel" minlength="4" class="form-control" placeholder="" value="813-555-555" required ngModel>
+                    <div *ngIf="agentFax.errors && (agentFax.dirty || agentFax.touched)" class="alert">
+                      <div [hidden]="!agentFax.errors.required">Required field</div>
+                      <div [hidden]="!agentFax.errors.minlength">Please enter atlease 4 character</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group clearfix">
+                  <label class="label-big">Email</label>
+                  <div class="input-div small-div">
+                    <input type="text" name="agentEmail" #agentEmail="ngModel" pattern = "^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" class="form-control" placeholder="" value="redacted@olsi.net" required ngModel>
+                    <div *ngIf="agentEmail.errors && (agentEmail.dirty || agentEmail.touched)" class="alert">
+                      <div [hidden]="!agentEmail.errors.required">Required field</div>
+                      <div [hidden]="!agentEmail.errors.pattern">Please enter valid email id</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </p-accordionTab>
     </div>
+    </p-accordion>
 
-    <!-- Order WOID Details Form Expand and Collapse Section -->
-    <div class="collapse-expand-container clearfix">
-      <div class="title column-33 border-devided">
-        <h4 class="title-tablet-mobile visible-xs visible-sm">3. INSURED</h4>
-        <div class="inline-form woid-form">
-          <div class="form-group margin-none clearfix">
-            <label class="label-big">Insured Name</label>
-            <div class="input-div small-div">
-              <input type="text" class="form-control" placeholder="Scenic Motors Inc">
-            </div>
-          </div>
-          <div class="form-group clearfix">
-            <label class="label-big">Other Name</label>
-            <div class="input-div small-div">
-              <input type="text" class="form-control" placeholder="">
-            </div>
-          </div>
-          <div class="form-group clearfix">
-            <label class="label-big">Insured Address</label>
-            <div class="input-div small-div">
-              <textarea class="textarea">1992 Rockford Street</textarea>
-            </div>
-          </div>
-          <div class="form-group clearfix">
-            <label class="label-big">City</label>
-            <div class="input-div small-div">
-              <input type="text" class="form-control" placeholder="" value="Mount Airy">
-            </div>
-          </div>
-          <div class="form-group clearfix">
-            <label class="label-big">State</label>
-            <div class="input-div small-div">
-              <input type="text" class="form-control" placeholder="" value="NC">
-            </div>
-          </div>
-          <div class="form-group clearfix">
-            <label class="label-big">ZIP Code</label>
-            <div class="input-div small-div">
-              <input type="text" class="form-control" placeholder="" value="27030">
-            </div>
-          </div>
-          <div class="form-group clearfix">
-            <label class="label-big">Contact Name</label>
-            <div class="input-div small-div">
-              <input type="text" class="form-control input-small" placeholder="" value="John">
-              <input type="text" class="form-control input-small" placeholder="" value="Smith">
-            </div>
-          </div>
-          <div class="form-group clearfix">
-            <label class="label-big">Main Phone</label>
-            <div class="input-div small-div">
-              <input type="text" class="form-control" placeholder="" value="813-555-555">
-            </div>
-          </div>
-          <div class="form-group clearfix">
-            <label class="label-big">Fax</label>
-            <div class="input-div small-div">
-              <input type="text" class="form-control" placeholder="" value="813-555-555">
-            </div>
-          </div>
-          <div class="form-group clearfix">
-            <label class="label-big">Cell Phone</label>
-            <div class="input-div small-div">
-              <input type="text" class="form-control" placeholder="" value="813-555-555">
-            </div>
-          </div>
-          <div class="form-group clearfix">
-            <label class="label-big">Email</label>
-            <div class="input-div small-div">
-              <input type="text" class="form-control" placeholder="" value="test@xyz.com">
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="title column-33 border-devided">
-        <h4 class="title-tablet-mobile visible-xs visible-sm">4. RECORD LOCATION INFORMATION</h4>
-        <div class="inline-form woid-form">
-          <div class="form-group margin-none clearfix">
-            <label class="label-big">Name</label>
-            <div class="input-div small-div">
-              <input type="text" class="form-control" placeholder="Scenic Motors Inc">
-            </div>
-          </div>
-          <div class="form-group clearfix">
-            <label class="label-big">Other Name</label>
-            <div class="input-div small-div">
-              <input type="text" class="form-control" placeholder="">
-            </div>
-          </div>
-          <div class="form-group clearfix">
-            <label class="label-big">Record Address</label>
-            <div class="input-div small-div">
-              <textarea class="textarea">1992 Rockford Street</textarea>
-            </div>
-          </div>
-          <div class="form-group clearfix">
-            <label class="label-big">City</label>
-            <div class="input-div small-div">
-              <input type="text" class="form-control" placeholder="" value="Mount Airy">
-            </div>
-          </div>
-          <div class="form-group clearfix">
-            <label class="label-big">State</label>
-            <div class="input-div small-div">
-              <input type="text" class="form-control" placeholder="" value="NC">
-            </div>
-          </div>
-          <div class="form-group clearfix">
-            <label class="label-big">ZIP Code</label>
-            <div class="input-div small-div">
-              <input type="text" class="form-control" placeholder="" value="27030">
-            </div>
-          </div>
-          <div class="form-group clearfix">
-            <label class="label-big">Contact Name</label>
-            <div class="input-div small-div">
-              <input type="text" class="form-control input-small" placeholder="" value="John">
-              <input type="text" class="form-control input-small" placeholder="" value="Smith">
-            </div>
-          </div>
-          <div class="form-group clearfix">
-            <label class="label-big">Main Phone</label>
-            <div class="input-div small-div">
-              <input type="text" class="form-control" placeholder="" value="813-555-555">
-            </div>
-          </div>
-          <div class="form-group clearfix">
-            <label class="label-big">Fax</label>
-            <div class="input-div small-div">
-              <input type="text" class="form-control" placeholder="" value="813-555-555">
-            </div>
-          </div>
-          <div class="form-group clearfix">
-            <label class="label-big">Cell Phone</label>
-            <div class="input-div small-div">
-              <input type="text" class="form-control" placeholder="" value="813-555-555">
-            </div>
-          </div>
-          <div class="form-group clearfix">
-            <label class="label-big">Email</label>
-            <div class="input-div small-div">
-              <input type="text" class="form-control" placeholder="" value="test@xyz.com">
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="title column-33 border-devided">
-        <h4 class="title-tablet-mobile visible-xs visible-sm">5. Agent Information</h4>
-        <div class="inline-form woid-form">
-          <div class="form-group margin-none clearfix">
-            <label class="label-big">Agent Name 1</label>
-            <div class="input-div small-div">
-              <input type="text" class="form-control" placeholder="" value="Smith Bros">
-            </div>
-          </div>
-          <div class="form-group clearfix">
-            <label class="label-big">Agent Name 2</label>
-            <div class="input-div small-div">
-              <input type="text" class="form-control" placeholder="">
-            </div>
-          </div>
-          <div class="form-group clearfix">
-            <label class="label-big">Agent Address</label>
-            <div class="input-div small-div">
-              <textarea class="textarea">PO BOX 1234</textarea>
-            </div>
-          </div>
-          <div class="form-group clearfix">
-            <label class="label-big">City</label>
-            <div class="input-div small-div">
-              <input type="text" class="form-control" placeholder="" value="Tampa">
-            </div>
-          </div>
-          <div class="form-group clearfix">
-            <label class="label-big">State</label>
-            <div class="input-div small-div">
-              <input type="text" class="form-control" placeholder="" value="FL">
-            </div>
-          </div>
-          <div class="form-group clearfix">
-            <label class="label-big">ZIP Code</label>
-            <div class="input-div small-div">
-              <input type="text" class="form-control" placeholder="">
-            </div>
-          </div>
-          <div class="form-group clearfix">
-            <label class="label-big">Contact Name</label>
-            <div class="input-div small-div">
-              <input type="text" class="form-control input-small" placeholder="" value="John">
-              <!-- <input type="text" class="form-control input-small" placeholder="Smith"> -->
-            </div>
-          </div>
-          <div class="form-group clearfix">
-            <label class="label-big">Agent Phone</label>
-            <div class="input-div small-div">
-              <input type="text" class="form-control" placeholder="" value="813-555-555">
-            </div>
-          </div>
-          <div class="form-group clearfix">
-            <label class="label-big">Fax</label>
-            <div class="input-div small-div">
-              <input type="text" class="form-control" placeholder="" value="813-555-555">
-            </div>
-          </div>
-          <div class="form-group clearfix">
-            <label class="label-big">Email</label>
-            <div class="input-div small-div">
-              <input type="text" class="form-control" placeholder="" value="redacted@olsi.net">
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="clearfix">
+      <button type="submit" [disabled]="!infoTabForm.form.valid" class="btn btn-secondary">SAVE &amp; SUBMIT CHANGES</button>
+      <button type="button" class="btn btn-border-pink cancel">CANCEL</button>
     </div>
-  </div>
-  <div class="clearfix">
-    <button type="button" class="btn btn-secondary">SAVE &amp; SUBMIT CHANGES</button>
-    <button type="button" class="btn btn-border-pink cancel">CANCEL</button>
-  </div>
+  </form>
 </div>

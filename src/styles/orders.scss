@@ -537,6 +537,35 @@ ul.order-subtabs {
 /*------- Order WOID Details Collapsible Form Style -------*/
 .collapse-form {
   margin-bottom: 38px;
+
+  .ui-accordion-content {
+    padding: 0;
+  }
+  .ui-accordion-header {
+    a {
+      padding: 0;
+      .ui-accordion-toggle-icon {
+        font-size: 30px;
+        color: #fff;
+        position: absolute;
+        z-index: 5;
+        right: 5px;
+        top: 9px;
+      }
+      .fa-caret-right:before {
+        font-family: 'icomoon';
+        content: "\e91c";
+      }
+      .fa-caret-down:before {
+        font-family: 'icomoon';
+        content: "\e929";
+      }
+    }
+  }
+  .margintop30 {
+    margin-top: 30px;
+  }
+
   .title-bar {
     background-color: $table-title-color;
     font-size: 0.857em;
@@ -639,6 +668,9 @@ ul.order-subtabs {
             color: $form-input;
             line-height: 26px;
           }
+          .margintop10 {
+            margin-top: 10px;
+          }
           .input-small {
             width: 48%;
             float: left;
@@ -656,7 +688,7 @@ ul.order-subtabs {
             resize: none;
           }
           .calendar-input {
-            width: 143px;
+            width: 141px;
             position: relative;
             .calendar-icon {
               position: absolute;
