@@ -21,24 +21,30 @@
     </div>
     <div class="add-report-form">
       <h5 class="report-title">Add Report</h5>
-      <form class="inline-form report-form clearfix">
+      <form class="inline-form report-form clearfix" #addReportTabForm="ngForm" (ngSubmit)="addReportTabForm(addReportTabForm.value)">
         <div class="form-group clearfix">
           <label class="control-label">Prog Note Type</label>
           <div class="input-wrap row">
-            <span class="selectbox col-sm-5 col-md row-5">
+            <span class="selectbox col-sm-5 col-md row-5" >
               <select class="cs-select cs-skin-border">
-                <option>Select</option>
+                <!-- <option>Select</option> -->
                 <option value="">Select 1</option>
                 <option value="">Select 2</option>
                 <option value="">Select 3</option>
               </select>
             </span>
+            <!-- <div *ngIf="addReportNoteType.errors && (addReportNoteType.dirty || addReportNoteType.touched)" class="alert">
+              <div [hidden]="!addReportNoteType.errors.required">Required Field</div>
+            </div> -->
           </div>
         </div>
         <div class="form-group clearfix">
           <label class="control-label">Notes</label>
           <div class="input-wrap">
-            <textarea class="textarea" rows="4">Enter Notes</textarea>
+            <textarea class="textarea" rows="4" name="addReportNotes" #addReportNotes="ngModel" required ngModel>Enter Notes</textarea>
+            <div *ngIf="addReportNotes.errors && (addReportNotes.dirty || addReportNotes.touched)" class="alert">
+              <div [hidden]="!addReportNotes.errors.required">Required Field</div>
+            </div>
           </div>
         </div>
         <div class="form-group clearfix">

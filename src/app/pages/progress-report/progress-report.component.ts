@@ -17,5 +17,9 @@ export class ProgressReportComponent implements OnInit {
     this.progressReportGrid = this.progressGridService.progressReportGridList();
   }
 
+  addReportTabForm(value: any) {
+    console.log(value);
+  }
+
 
 }
