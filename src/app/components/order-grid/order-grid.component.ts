@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../../services/data.service';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-order-grid',
@@ -15,7 +16,13 @@ export class OrderGridComponent implements OnInit {
 
   ngOnInit() {
     this.tableGrid = this.dataservice.tableGridData();
-    // this.dataservice.tableGridData().subscribe((data) =>  this.tableGrid = data);
+    // this.dataservice.tableGridData()
+      // .subscribe(data => this.tableGrid = data);
   }
+
+  // ngOnInit() {
+  //   this.dataservice.tableGridData()
+  //     .subscribe(data => this.tableGrid = data);
+  // }
 
 }

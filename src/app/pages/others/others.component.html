@@ -1,0 +1,29 @@
+<p>
+  others works!
+</p>
+
+<!-- <div class="row well">
+  <div>{{userDtlProfile.name}}</div>
+  <div>{{userDtlProfile.job}}</div>
+  <div>{{userDtlProfile.city}}</div>
+  <div>{{userDtlProfile.id}}</div>
+</div> -->
+
+<div class="row well">
+  <div class="col-sm-5">
+    <select [(ngModel)]="contryName" (change)="onclickGetCountry()">
+      <option *ngFor="let contrylist of contryList" value="{{contrylist.name}}">{{contrylist.name}}</option>
+    </select>
+    <br><br>
+  </div>
+  <!-- <button type="button" class="btn btn-primary" (change)="onclickGetCountry()">Save</button> -->
+
+  <div class="col-sm-7">
+    <!-- <h5>Country Name : {{ contryObjs.name }}</h5>
+    <h5>Country Capital : {{ contryObjs.capital }}</h5>
+    <h5>Country Region : {{ contryObjs.region }}</h5>
+    <h5>Country Flag : {{ contryObjs.numericCode }}</h5>
+    <h5>Country Currencies : {{ contryObjs.currencies[0].code }} {{ contryObjs.currencies[0].symbol }}</h5>
+    <h5><img src="{{ contryObjs.flag }}" width="100px" height="60px"></h5> -->
+  </div>
+</div>

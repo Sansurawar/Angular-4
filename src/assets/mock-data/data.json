@@ -1,0 +1,34 @@
+[
+  {
+    "changeDate": "23/7/2017",
+    "letterAddress": "456 N Rodeo Dr, Beverly Hills, CA 65",
+    "apptDate": "21/7/2017",
+    "windowTime": "8:30 am - 12:30 pm",
+    "notes" : "Lorem Ipsum dolor...",
+    "status" : "Rescheduled (Post Sent)"
+  },
+  {
+    "changeDate": "23/7/2017",
+    "letterAddress": "johnsmith@gmail.com",
+    "apptDate": "21/7/2017",
+    "windowTime": "9:00 am - 5:00 pm",
+    "notes" : "Lorem Ipsum dolor...",
+    "status" : "Rescheduled (Post Sent)"
+  },
+  {
+    "changeDate": "23/7/2017",
+    "letterAddress": "456 N Rodeo Dr, Beverly Hills, CA 65",
+    "apptDate": "21/7/2017",
+    "windowTime": "2:00 am - 8:30 pm",
+    "notes" : "Lorem Ipsum dolor...",
+    "status" : "Rescheduled (Post Sent)"
+  },
+  {
+    "changeDate": "23/7/2017",
+    "letterAddress": "michaelsmith@gmail.com",
+    "apptDate": "21/7/2017",
+    "windowTime": "9:00 am - 5:00 pm",
+    "notes" : "Lorem Ipsum dolor...",
+    "status" : "Rescheduled (Post Sent)"
+  }
+]

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService} from '../../services/data.service'
+import { DataService} from '../../services/data.service';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-appointment',
@@ -14,8 +15,13 @@ export class AppointmentComponent implements OnInit {
 
   constructor( private historyGridService: DataService) { }
 
+  // ngOnInit() {
+  //   this.historyGrid = this.historyGridService.historyGridList();
+  // }
+
   ngOnInit() {
-    this.historyGrid = this.historyGridService.historyGridList();
+    this.historyGridService.historyGridList()
+      .subscribe(data => this.historyGrid = data);
   }
 
   confirmToggle() {

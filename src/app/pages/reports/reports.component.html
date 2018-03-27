@@ -4,6 +4,94 @@
 <br>
 <h4>User Details</h4>
 
+<br><br>
+<div class="row">
+  <div class="col-sm-5">
+    <form #reportForm="ngForm">
+      <div class="inline-form woid-form report-form">
+        <div class="form-group margin-none clearfix">
+          <label class="labels">First Name :</label>
+          <div class="input-div">
+            <input type="text" name="repFirstName" #repFirstName="ngModel" class="form-control" required [(ngModel)]="firstName">
+            <div *ngIf="repFirstName.errors && (repFirstName.dirty || repFirstName.touched)" class="alert">
+              <div [hidden]="!repFirstName.errors.required">Required field</div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group margin-none clearfix">
+          <label class="labels">Last Name :</label>
+          <div class="input-div">
+            <input type="text" name="repLastName" #repLastName="ngModel" class="form-control" required [(ngModel)]="lastName">
+            <div *ngIf="repLastName.errors && (repLastName.dirty || repLastName.touched)" class="alert">
+              <div [hidden]="!repLastName.errors.required">Required field</div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group clearfix">
+          <label class="labels">Email Id :</label>
+          <div class="input-div small-div">
+            <input type="text" name="reportEmail" #reportEmail="ngModel" pattern = "^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" class="form-control" required [(ngModel)]="email">
+            <div *ngIf="reportEmail.errors && (reportEmail.dirty || reportEmail.touched)" class="alert">
+              <div [hidden]="!reportEmail.errors.required">Required field</div>
+              <div [hidden]="!reportEmail.errors.pattern">Please enter valid email id</div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group margin-none clearfix">
+          <label class="labels">State :</label>
+          <div class="input-div">
+            <input type="text" name="repstate" #repstate="ngModel" class="form-control" required [(ngModel)]="address.state">
+            <div *ngIf="repstate.errors && (repstate.dirty || repstate.touched)" class="alert">
+              <div [hidden]="!repstate.errors.required">Required field</div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group margin-none clearfix">
+          <label class="labels">City :</label>
+          <div class="input-div">
+            <input type="text" name="repCity" #repCity="ngModel" class="form-control" required [(ngModel)]="address.city">
+            <div *ngIf="repCity.errors && (repCity.dirty || repCity.touched)" class="alert">
+              <div [hidden]="!repCity.errors.required">Required field</div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group margin-none clearfix">
+          <label class="labels">Location :</label>
+          <div class="input-div">
+            <input type="text" name="repLocation" #repLocation="ngModel" class="form-control" required [(ngModel)]="address.location">
+            <div *ngIf="repLocation.errors && (repLocation.dirty || repLocation.touched)" class="alert">
+              <div [hidden]="!repLocation.errors.required">Required field</div>
+            </div>
+          </div>
+        </div>
+        <button type="button" (click)="reportForms(reportForm.value)" class="btn btn-primary ">Submit</button>
+      </div>
+    </form>
+  </div>
+  <div class="col-sm-3">
+    <p><strong>First Name :</strong> {{firstName}}</p>
+    <p><strong>Last Name :</strong> {{lastName}}</p>
+    <p><strong>Email :</strong> {{email}}</p>
+    <p><strong>State :</strong> {{address.state}}</p>
+    <p><strong>City :</strong> {{address.city}}</p>
+    <p><strong>Location :</strong> {{address.location}}</p>
+  </div>
+  <div class="col-sm-3">
+    <div class="form-group margin-none clearfix">
+      <label class="labels">Add Colors Name :</label>
+      <div class="input-div">
+        <input type="text" name="repColor" #colors class="form-control" minlength="4" [(ngModel)]="colorName" >
+        <button type="button" (click)="addColorList(colors.value)" class="btn btn-primary margintop-10">Add</button>
+      </div>
+    </div>
+    <ul class="colorListing">
+      <li *ngFor="let colors of colorList; let i = index"><span class="colors-text">{{i + 1}}. {{colors}}</span> <a class="btn-primary btn-sm" (click)="deleteColors(colors)">x</a></li>
+    </ul>
+  </div>
+
+</div>
+
+<br><br>
 <div class="server-data-list">
   <ul>
     <li *ngFor="let fetchingData of fetchDataFromServer">

@@ -15,3 +15,26 @@
     }
   }
 }
+
+.report-form {
+  .form-group {
+    .labels {
+      width: 20%;
+    }
+  }
+}
+.margintop-10 {
+  margin-top: 10px;
+}
+ul.colorListing {
+  margin-left: 10px;
+  list-style: none;
+  li {
+    border-bottom: 1px solid #ccc;
+    padding: 3px 0;
+  }
+  .colors-text {
+    width: 70%;
+    display: inline-block;
+  }
+}

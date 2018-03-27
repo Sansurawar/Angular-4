@@ -5,6 +5,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {SharedModule} from 'primeng/primeng';
 import {FormsModule} from '@angular/forms';
 import {HttpModule} from '@angular/http';
+// import {HttpClientModule} from '@angular/common/http';
 
 
 import { AppComponent } from './app.component';
@@ -32,6 +33,8 @@ import { FlagComponent } from './components/flag/flag.component';
 import { ActionListComponent } from './pages/action-list/action-list.component';
 
 import { DataService } from './services/data.service';
+// import { PostServices } from './services/post.service';
+import { OthersComponent } from './pages/others/others.component';
 
 
 @NgModule({
@@ -56,7 +59,8 @@ import { DataService } from './services/data.service';
     InsuredComponent,
     ActionComponent,
     FlagComponent,
-    ActionListComponent
+    ActionListComponent,
+    OthersComponent
   ],
   imports: [
     BrowserModule,

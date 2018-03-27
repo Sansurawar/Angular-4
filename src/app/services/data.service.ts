@@ -1,12 +1,22 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+import { Http} from '@angular/http';
+// import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import 'rxjs/add/operator/map';
+// import { Headers } from '@angular/http';
 
 @Injectable()
 export class DataService {
 
   constructor( public http: Http) {
     console.log('data services ran...')
+  }
+
+  getCountryDetils(contryName: string){
+    return this.http.get('https://restcountries.eu/rest/v2/name/'+contryName+'?fullText=true')
+  }
+  getContriesList(){
+    return this.http.get('https://restcountries.eu/rest/v2/all')
+      .map(res => res.json());
   }
 
   getPosts() {
@@ -27,7 +37,8 @@ export class DataService {
       { voidId:'1253312', unitName: 'ACME Insurance', age: 35, insureName: 'SJS Truck', status: 'Completed', productLine: 'OSI Physical Audit', address: '799 E Dragram Suite Tucson AZ 85705 New Jersey', dateEmployee: 'Exp:9/27/2017 Due:9/27/2017 Sch:12/27/2017 Employee:Lorem Ips', svcCode: 'Normal' },
       { voidId:'1554434', unitName: 'Western National', age: 45, insureName: 'Pine Mount', status: 'Closed Out', productLine: 'OSI Physical Audit', address: '799 E Dragram Suite Tucson AZ 85705 New Jersey', dateEmployee: 'Exp:9/27/2017 Due:9/27/2017 Sch:12/27/2017 Employee:Lorem Ips', svcCode: 'Normal' },
       { voidId:'1444399', unitName: 'Midwestern', age: 55, insureName: 'Olaf’s Centre', status: 'Review', productLine: 'OSI Physical Audit', address: '799 E Dragram Suite Tucson AZ 85705 New Jersey', dateEmployee: 'Exp:9/27/2017 Due:9/27/2017 Sch:12/27/2017 Employee:Lorem Ips', svcCode: 'Normal' }
-    ];
+    ]
+
   }
 
   actionPastList() {
@@ -69,13 +80,20 @@ export class DataService {
   }
 
   historyGridList() {
-    return [
-      {changeDate: '23/7/2017', letterAddress: '456 N Rodeo Dr, Beverly Hills, CA 65', apptDate: '21/7/2017', windowTime: '8:30 am - 12:30 pm', notes: 'Lorem Ipsum dolor...', status: 'Rescheduled (Post Sent)' },
-      {changeDate: '17/6/2017', letterAddress: 'johnsmith@gmail.com', apptDate: '16/6/2017', windowTime: '9:00 am - 5:00 pm', notes: 'Lorem Ipsum dolor...', status: 'Rescheduled (Email Sent)' },
-      {changeDate: '11/5/2017', letterAddress: '456 N Rodeo Dr, Beverly Hills, CA 65', apptDate: '11/5/2017', windowTime: '2:00 am - 8:00 pm', notes: 'Lorem Ipsum dolor...', status: 'Confirmed (No Letter Sent))' },
-      {changeDate: '27/4/2017', letterAddress: 'michaelsmith@gmail.com', apptDate: '27/4/2017', windowTime: '9:00 am - 5:00 pm', notes: '---', status: 'Rescheduled (Post Sent)' }
-    ]
+    return this.http.get('../assets/mock-data/data.json')
+      .map(res => res.json())
+
+    // return [
+    //   {changeDate: '23/7/2017', letterAddress: '456 N Rodeo Dr, Beverly Hills, CA 65', apptDate: '21/7/2017', windowTime: '8:30 am - 12:30 pm', notes: 'Lorem Ipsum dolor...', status: 'Rescheduled (Post Sent)' },
+    //   {changeDate: '17/6/2017', letterAddress: 'johnsmith@gmail.com', apptDate: '16/6/2017', windowTime: '9:00 am - 5:00 pm', notes: 'Lorem Ipsum dolor...', status: 'Rescheduled (Email Sent)' },
+    //   {changeDate: '11/5/2017', letterAddress: '456 N Rodeo Dr, Beverly Hills, CA 65', apptDate: '11/5/2017', windowTime: '2:00 am - 8:00 pm', notes: 'Lorem Ipsum dolor...', status: 'Confirmed (No Letter Sent))' },
+    //   {changeDate: '27/4/2017', letterAddress: 'michaelsmith@gmail.com', apptDate: '27/4/2017', windowTime: '9:00 am - 5:00 pm', notes: '---', status: 'Rescheduled (Post Sent)' }
+    // ]
   }
+
+  // generalService(generalFormData){
+  //   return this.http.post('http://xxx/externalapi/add', generalFormData).subscribe((data) => {});
+  // }
 
 
 }

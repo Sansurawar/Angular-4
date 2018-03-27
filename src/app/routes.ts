@@ -11,13 +11,19 @@ import { DocumentsComponent } from './pages/documents/documents.component';
 import { AppointmentComponent } from './pages/appointment/appointment.component';
 import { RecordsComponent } from './pages/records/records.component';
 import { ActionListComponent } from './pages/action-list/action-list.component';
+import { OthersComponent } from './pages/others/others.component';
 
 const appRoutes: Routes = [
   // { path: '', component:OrderComponent, pathMatch: 'full' },
-  { path: 'order', component:OrderComponent },
+  { path: 'order', component:OrderComponent
+// children: [
+//   { path: 'Details', component:OrderGeneralPageComponent}
+// ]
+  },
   { path: 'order/:id', component:OrderGeneralPageComponent},
   { path: 'agenda', component: AgendaComponent },
   { path: 'reports', component: ReportsComponent},
+  { path: 'other', component: OthersComponent},
   { path: 'genralInfo', component: GeneralInfoComponent},
   { path: 'progressreport', component: ProgressReportComponent},
   { path: 'document', component: DocumentsComponent},
